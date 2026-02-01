@@ -1,313 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>OpenClaw 每日新闻 - 2026年2月1日 - OpenClaw Daily CN</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月01日</title>
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #3b82f6;
-            --accent-color: #1d4ed8;
-            --text-color: #1f2937;
-            --text-light: #6b7280;
-            --bg-color: #ffffff;
-            --bg-light: #f9fafb;
-            --border-color: #e5e7eb;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --radius: 12px;
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--bg-color);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            overflow: hidden;
         }
-        
         .header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
-            background-size: cover;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-            opacity: 0.9;
-            transition: var(--transition);
-            position: relative;
-            z-index: 1;
-            margin-bottom: 1rem;
-        }
-        
-        .back-link:hover {
-            opacity: 1;
-            transform: translateX(-4px);
-        }
-        
-        .post-header {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .post-header h1 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-        
-        .post-date {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-        
-        .post-date::before {
-            content: '📅';
-            font-size: 0.9rem;
-        }
-        
-        .content {
-            padding: 2.5rem 2rem;
-        }
-        
-        .article-content {
-            font-size: 1.1rem;
-        }
-        
-        .article-content h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 2rem 0 1rem;
-            color: var(--text-color);
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
-        
-        .article-content h2 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin: 1.75rem 0 0.75rem;
-            color: var(--text-color);
-        }
-        
-        .article-content h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 1.5rem 0 0.5rem;
-            color: var(--text-color);
-        }
-        
-        .article-content p {
-            margin: 1rem 0;
-            color: var(--text-color);
-        }
-        
-        .article-content ul {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
-        }
-        
-        .article-content li {
-            margin: 0.5rem 0;
-            position: relative;
-            padding-left: 0.5rem;
-        }
-        
-        .article-content li::before {
-            content: '•';
-            color: var(--primary-color);
-            font-weight: bold;
-            position: absolute;
-            left: -1rem;
-        }
-        
-        .article-content a {
-            color: var(--primary-color);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: var(--transition);
-        }
-        
-        .article-content a:hover {
-            border-bottom-color: var(--primary-color);
-        }
-        
-        .article-content hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--border-color), transparent);
-            margin: 2rem 0;
-        }
-        
-        .article-content pre {
-            background: var(--bg-light);
-            border-radius: 8px;
-            padding: 1.5rem;
-            overflow-x: auto;
-            margin: 1.5rem 0;
-            border: 1px solid var(--border-color);
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        .article-content code {
-            background: var(--bg-light);
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-            font-size: 0.9em;
-            color: var(--accent-color);
-        }
-        
-        .article-content blockquote {
-            border-left: 4px solid var(--primary-color);
-            margin: 1.5rem 0;
-            padding: 0.5rem 0 0.5rem 1.5rem;
-            background: var(--bg-light);
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            color: var(--text-light);
-        }
-        
-        .footer {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
             text-align: center;
-            padding: 2rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            background: var(--bg-light);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        
-        .footer a {
-            color: var(--primary-color);
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .news-item:hover {
+            transform: translateY(-2px);
+        }
+        .news-item h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a {
+            color: #667eea;
             text-decoration: none;
+            font-weight: 500;
         }
-        
-        .footer a:hover {
+        .news-item .meta a:hover {
             text-decoration: underline;
         }
-        
-        @media (max-width: 640px) {
-            .header {
-                padding: 1.5rem;
-            }
-            
-            .post-header h1 {
-                font-size: 1.75rem;
-            }
-            
-            .content {
-                padding: 1.5rem;
-            }
-            
-            .article-content {
-                font-size: 1rem;
-            }
-            
-            .article-content h1 {
-                font-size: 1.75rem;
-            }
-            
-            .article-content h2 {
-                font-size: 1.5rem;
-            }
-            
-            .article-content h3 {
-                font-size: 1.25rem;
-            }
+        .news-item .meta span {
+            color: #999;
+            font-size: 13px;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <a href="/openclaw-daily-cn/" class="back-link">← 返回首页</a>
-            <div class="post-header">
-                <h1>OpenClaw 每日新闻 - 2026年2月1日</h1>
-                <div class="post-date">2026-02-01 18:40:00</div>
+        <div class="nav">
+            <a href="../01/index.html">← 昨日</a>
+            <a href="./">今日</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-01 21:01 · 自动更新</p>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h2>Kimi K2.5成为OpenClaw首个宣布免费使用的主力模型</h2>
+                <p>36氪获悉,AI智能体OpenClaw(原Clawdbot)宣布,用户调用Kimi K2.5 模型和Kimi Coding相关能力,均可免费体验｡Kimi K2.5成为OpenClaw走红以来,首个被OpenClaw官方宣布为用户开放免费额度的主力模型｡</p>
+                <div class="meta">
+                    <a href="https://new.qq.com/rain/a/20260201A02LFF00" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
+                </div>
             </div>
-        </header>
+            <div class="news-item">
+                <h2>数小时两度改名:爆火AI助手Clawdbot变身OpenClaw</h2>
+                <p>IT之家 1 月 31 日消息,爆火开源 AI 智能体 Clawdbot 在数小时内经历了两次更名,在短暂更名为 Moltbot 后,迅速调整为听起来更为顺口的 OpenClaw｡      科技媒体 Wccftech 指出,此次更名的直接原因来自 AI 巨头 Anthropic 的施压,Clawdbot 的名称与其旗下的 Claude 模型过于相似,存在侵权风险｡      在定位方面,OpenClaw 调整为一款开源的个人 AI 助手,是用户的“数字员工”｡IT之家援引博文介绍,与传统被动响应的聊天机器人不同,OpenClaw 的核心竞争力在于其“主动自动化”能力｡      该 AI 智能体无需用户发出指令,即可自主清理收件箱､预订服务､管理日历及处理其他事务｡同时,它具备强大的记忆功能,能够保存所有对话历史,并从过往的对话片段中精准回调用户的偏好设置｡      技术层面看,Ope</p>
+                <div class="meta">
+                    <a href="https://new.qq.com/rain/a/20260131A0390C00" target="_blank">查看原文 →</a>
+                    <span>2026-01-31</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>姚顺雨之后,又一95后天才加入腾讯/苹果AI团队再现离职潮/Clawdbot再改名,已破10万星</h2>
+                <p>苹果发布 2026 新春影片《碰见你》曝马斯克评估 SpaceX IPO 前与特斯拉或 xAI 合并苹果 AI 团队再现离职潮,多名研究员与 Siri 高层投向 Meta 与 Google庞天宇加盟腾讯混元,负责多模态强化学习方向‍曝理想新设软件本体与人形机器人团队Clawdbot 再改名:OpenClaw 确立开源与社区驱动定位GDC 报告:52% 游戏开发者认为生成式 AI 对行业有害Kimi 海外收入首次超越国内,K2.5 推动全球用户激增AI 视频热潮消退,Sora App 下载量连续两月下滑千问 C 端应用团队四篇论文入选 ICLR 2026音乐出版商再诉 Anthropic:非法下载 2 万首歌曲宇树王兴兴:通用机器人十年可期,大模型是行业｢诺奖级｣突破生数科技推出 Vidu Q3,视频生成进入｢一键成片｣阶段商汤开源 SenseNova‑MARS,多模态推理性能超越 Gemi</p>
+                <div class="meta">
+                    <a href="https://new.qq.com/rain/a/20260131A0260600" target="_blank">查看原文 →</a>
+                    <span>2026-01-31</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>开源AI助手项目Clawdbot再改名 最终定版为OpenClaw</h2>
+                <p>【CNMO科技新闻】此前开源个人AI助理项目Clawdbot得到不少关注,而在近期,该开源项目也正式宣布,项目将以OpenClaw为最终命名重新出发｡      此次更名始于本周早些时候,当时的Clawdbot凭借其强大的本地自主执行能力在开源社区迅速走红｡但是,其代号“Clawd”与Anthropic旗下的AI模型“Claude”过于接近,因粗收到了商标权通知｡为规避法律风险,开发者最初将项目更名为 Moltbot,寓意像龙虾“脱壳(Molt)”一样重生｡然而,由于“Moltbot”在发音和语义上被部分社区成员认为略显生涩,因此最终决定采用更加专业且直观的OpenClaw作为正式品牌｡      OpenClaw依然采用龙虾作为吉祥物,它能够运行在用户的个人设备上,并直接访问本地文件系统与应用程序｡与市面上依赖云端的AI助手不同,它可以根据用户的自然语言指令,在社交平台上自主处理邮件､管</p>
+                <div class="meta">
+                    <a href="https://new.qq.com/rain/a/20260131A03K6H00" target="_blank">查看原文 →</a>
+                    <span>2026-01-31</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>AI助手OpenClaw爆火:一个24小时不休息的数字管家</h2>
+                <p>1月31日消息,近日科技圈一个名为OpenClaw的个人AI代理工具走红网络｡      据悉,这款工具原来名为Clawdbot,因被AI巨头Anthropic指控Clawdbot与其旗下的Claude商标相似,Clawdbot被迫更名为OpenClaw,其中Open的意思是开源,对所有人都开放｡      简单来说,普通的AI只会教你如何整理文件,OpenClaw可以直接上手实操｡你在电脑上部署完成后,在WhatsApp､Telegram等聊天软件里直接给它发消息,它就会回应｡      它是一个AGI雏形下的AI智能体,不仅会思考,拥有永久记忆,更能通过iMessage､WhatsApp和你实时聊天,其核心就是把顶尖LLM大脑塞进每个人的手机里,让每个人都获得一个超级智能AI员工｡      业内人士表示,OpenClaw的走红正在成为一个极具代表性的样本:在强大的基础模型之上,一个理</p>
+                <div class="meta">
+                    <a href="https://new.qq.com/rain/a/20260131A06QE700" target="_blank">查看原文 →</a>
+                    <span>2026-01-31</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Clawdbot爆红,会抢走谁的饭碗?_澎湃号·湃客_澎湃新闻-The Paper</h2>
+                <p>几乎没有人预料到,2026年刚开年,科技圈会因为一款个人开发的AI助手而引发一场地震｡ 这款名为Clawdbot(后改名为OpenClaw)的个人AI代理工具,能运行在用户本地设备上,并通过WhatsApp､Telegram､Discord等聊天App与之互动｡它不仅能聊天,更能“做事”:管理邮箱､日程､自动化任务､浏览网页､执行脚本等,就像是一个24小时不休息的“数字管家”｡ 本周以来,Clawdbot的关注度指数级增长:GitHub星标曲线在数日内呈现垂直型飙升;全球二手市场上,因部署需求激增,Mac mini等小型电脑设备被集中抢购;技术社区迅速进入测评､复刻､二次开发｡投资人Dave Morin评价称,这是自ChatGPT以来,再次让他产生活在未来的技术体验｡ 更具戏剧性的是,这款现象级的产品并非出自科技巨头或资本加持的独角兽企业,而是由有着iOS开发背景的工程师彼得·斯坦伯格(P</p>
+                <div class="meta">
+                    <a href="https://www.thepaper.cn/newsDetail_forward_32499606" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>更懂你,更安全!枫清科技(Fabarta)首发中国版OpenClaw“龙虾”, 重新定义本地AI生产力_股市要闻_市场_中金在线</h2>
+                <p>2026年开年又迎来AI领域“ChatGPT时刻”,GitHub爆火的开源AI助手OpenClaw(原名Clawdbot､Moltbot)上线后在全球迅速走红｡用户无需打开各类网站或应用,直接通过通讯软件发送消息即可下达指令､执行任务｡不少海外用户已在苹果Mac mini上实现OpenClaw本地部署｡ 当OpenClaw这类“全职AI员工”加速出圈,中国也不乏能打的智能体产品｡枫清科技(Fabarta)近期将推出搭载 Fabarta个人专属智能体的基于苹果Mac mini 预装版,主打“开箱即用､本地安全､数据永不离开设备”的超性价比解决方案｡该方案依托 Apple Silicon(M4)平台的高能效算力,并联合国际头部产业伙伴推进落地交付,让本地AI从“能跑”走向“好用､可管､可规模化部署”｡ 该产品基于苹果M4芯片平台,深度融合本地执行能力,可直接操作文件､浏览器及终端命令,实现文件</p>
+                <div class="meta">
+                    <a href="http://sc.stock.cnfol.com/gushiyaowen/20260131/31989192.shtml" target="_blank">查看原文 →</a>
+                    <span>2026-01-31</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw开启智能体新阶段,国内AI需破内卷式竞争ClawdbotGitHubAI文本生成产业人工智能_新浪新闻</h2>
+                <p>2026年1月以来,一款名为OpenClaw(曾用名Clawdbot､Moltbot)的智能体项目在国际开源社区迅速走红,引发全球科技界的广泛关注｡截至1月31日,该项目在代码托管平台GitHub上的星标数量已超过12万个,官网累计访问量突破200万人次,成为近期增长最快的开源技术项目之一｡ OpenClaw的爆火还带动了相关硬件设备的需求｡因其“本地化部署”的特性,催生了市场对高效､易用本地硬件的特定需求,Mac mini因其性能､功耗和系统环境的优势,成为技术爱好者部署OpenClaw的热门选择,并一度在全球多个市场引发短期供应紧张｡ 从技术路径看,OpenClaw的核心创新在于集成而非颠覆｡它通过构建“智能体”作为中枢,系统性地整合了大语言模型的语义理解与任务规划能力､操作系统的自动化工具以及本地持久化存储,从而实现了从“对话应答”到“任务执行”的关键跨越｡在应用中,用户通过自然语言</p>
+                <div class="meta">
+                    <a href="https://k.sina.com.cn/article_7857201856_1d45362c001901xmeg.html" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>clawdbot谁开发的?Clawdbot正式改名OpenClaw_ZNDS资讯</h2>
+                <p>1.clawdbot开发人Peter Steinberger Clawdbot的开发者是奥地利开发者Peter Steinberger｡这位连续创业者曾创立PSPDFKit公司,开发出全球领先的PDF处理框架,服务客户包括苹果､Adobe等科技巨头｡2021年,他以约1亿欧元的价格出售公司股份后宣布退休,但四年后因“创作欲望”重返技术领域｡2025年6月,他创立新公司Amantus Machina,仅半年后便推出Clawdbot——这款被其称为“100%由AI编写代码”的开源项目｡ Peter从独立开发者到管理70人团队,从技术极客到企业收购者,再到退休后的二次创业｡他选择AI智能体作为新方向,源于对“个人智能体元年”的判断——Clawdbot正是这一理念的实践产物｡ 2.Clawdbot改名OpenClaw,命名争议与强制更名 Clawdbot的命名源于Claude Code的卡通龙虾</p>
+                <div class="meta">
+                    <a href="https://news.znds.com/article/news/69257.html" target="_blank">查看原文 →</a>
+                    <span>2026-01-30</span>
+                </div>
+            </div>
+        </div>
         
-        <main class="content">
-            <article class="article-content">
-<hr>
-<p>title: OpenClaw 每日新闻 - 2026年2月1日</p>
-<p>date: 2026-02-01 18:40:00</p>
-<hr>
-<br>
-<h1>OpenClaw 每日新闻</h1>
-<br>
-<h2>今日更新</h2>
-<br>
-<h3>1. 网站部署完成</h3>
-<li>OpenClaw Daily CN 网站已成功部署到 GitHub Pages</li>
-<li>支持自动更新和每日新闻推送</li>
-<li>访问地址: https://taurusggboy.github.io/openclaw-daily-cn/</li>
-<br>
-<h3>2. 技术栈</h3>
-<li>使用 Hexo 静态网站生成器</li>
-<li>GitHub Actions 自动化部署</li>
-<li>每日自动拉取 OpenClaw 最新新闻</li>
-<br>
-<h3>3. 未来计划</h3>
-<li>完善新闻内容提取</li>
-<li>添加 RSS 订阅功能</li>
-<li>优化移动端显示</li>
-<br>
-<h2>关于 OpenClaw</h2>
-<br>
-<p>OpenClaw 是一个开源项目，致力于提供最新的技术新闻和开发动态。</p>
-<br>
-<hr>
-<p class="update-time"><em>更新时间: 2026-02-01 18:40:00</em></p>
-            </article>
-        </main>
-        
-        <footer class="footer">
-            <p>© 2026 OpenClaw Daily CN. 所有文章采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> 许可协议</p>
-            <p>Powered by <a href="https://github.com/TaurusGGBOY/openclaw-daily-cn" target="_blank">OpenClaw Daily CN</a></p>
-        </footer>
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
     </div>
 </body>
 </html>
