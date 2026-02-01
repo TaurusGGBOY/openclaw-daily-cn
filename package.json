@@ -1,5 +1,8 @@
 {
   "name": "openclaw-daily-cn",
+  "hexo": {
+    "version": "4.2.1"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

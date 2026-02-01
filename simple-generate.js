@@ -44,7 +44,7 @@ async function generate() {
     <hr>
     ${posts.map(p => `
     <div class="post">
-        <h2><a href="/posts/${p.file.replace('.md', '.html')}">${p.title}</a></h2>
+        <h2><a href="/openclaw-daily-cn/posts/${p.file.replace('.md', '.html')}">${p.title}</a></h2>
         <p class="date">${p.date}</p>
     </div>
     `).join('')}
@@ -68,7 +68,7 @@ async function generate() {
     </style>
 </head>
 <body>
-    <p><a href="/">← 返回首页</a></p>
+    <p><a href="/openclaw-daily-cn/">← 返回首页</a></p>
     <h1>${post.title}</h1>
     <p class="date">${post.date}</p>
     <hr>
