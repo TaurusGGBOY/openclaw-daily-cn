@@ -464,9 +464,9 @@ async function generate() {
     <div class="container">
         <header class="header">
             <nav class="navbar">
-                <a href="/openclaw-daily-cn/" class="logo">OpenClaw Daily</a>
+                <a href="/" class="logo">OpenClaw Daily</a>
                 <div class="nav-links">
-                    <a href="/openclaw-daily-cn/">首页</a>
+                    <a href="/">首页</a>
                     <a href="https://github.com/TaurusGGBOY/openclaw-daily-cn" target="_blank">GitHub</a>
                     <a href="https://github.com/TaurusGGBOY/openclaw-daily-cn/issues" target="_blank">反馈</a>
                 </div>
@@ -489,11 +489,11 @@ async function generate() {
                         <span class="post-category">技术新闻</span>
                         <span class="post-read-time">📖 3 分钟阅读</span>
                     </div>
-                    <h2><a href="/openclaw-daily-cn/posts/${p.file.replace('.md', '.html')}">${p.title}</a></h2>
+                    <h2><a href="/posts/${p.file.replace('.md', '.html')}">${p.title}</a></h2>
                     <p class="post-excerpt">${p.content.split('\n').find(line => line.trim() && !line.startsWith('#') && !line.startsWith('-') && !line.includes('---')) || '阅读完整文章了解更多...'}</p>
                     <div class="post-card-footer">
                         <div class="post-date">${p.date}</div>
-                        <a href="/openclaw-daily-cn/posts/${p.file.replace('.md', '.html')}" class="read-more">阅读全文 →</a>
+                        <a href="/posts/${p.file.replace('.md', '.html')}" class="read-more">阅读全文 →</a>
                     </div>
                 </article>
                 `).join('')}
@@ -797,7 +797,7 @@ async function generate() {
 <body>
     <div class="container">
         <header class="header">
-            <a href="/openclaw-daily-cn/" class="back-link">← 返回首页</a>
+            <a href="/" class="back-link">← 返回首页</a>
             <div class="post-header">
                 <h1>${post.title}</h1>
                 <div class="post-date">${post.date}</div>
