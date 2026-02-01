@@ -101,6 +101,25 @@ html = f'''<!DOCTYPE html>
             color: #999;
             font-size: 13px;
         }}
+        .back-home {{
+            text-align: center;
+            margin: 20px 0;
+        }}
+        .back-home a {{
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }}
+        .back-home a:hover {{
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }}
         .footer {{
             text-align: center;
             padding: 30px;
@@ -181,6 +200,10 @@ else:
 '''
 
 html += '''        </div>
+        
+        <div class="back-home">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">← 返回首页</a>
+        </div>
         
         <div class="footer">
             <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
