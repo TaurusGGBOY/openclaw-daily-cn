@@ -46,6 +46,23 @@ html = f'''<!DOCTYPE html>
             text-align: center;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }}
+        .back-home-top {{
+            text-align: right;
+            margin-bottom: 10px;
+        }}
+        .back-home-top a {{
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }}
+        .back-home-top a:hover {{
+            background: rgba(255,255,255,0.3);
+        }}
         .header h1 {{
             background: linear-gradient(135deg, #667eea, #764ba2);
             -webkit-background-clip: text;
@@ -152,6 +169,9 @@ html = f'''<!DOCTYPE html>
 </head>
 <body>
     <div class="container">
+        <div class="back-home-top">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
+        </div>
         <div class="nav">
             <a href="../01/index.html">← 昨日</a>
             <a href="./">今日</a>
