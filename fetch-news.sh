@@ -4,8 +4,8 @@
 set -e
 
 REPO_DIR=~/project/openclaw-daily-cn  # 使用正确的仓库路径
-HTML_DIR="$REPO_DIR/$(date '+%Y/%m')"
-HTML_FILE="$HTML_DIR/$(date '+%d').html"
+HTML_DIR="$REPO_DIR/posts"
+HTML_FILE="$HTML_DIR/daily-$(date '+%Y-%m-%d').html"
 JSON_FILE="$REPO_DIR/news.json"
 LOG_FILE="$REPO_DIR/fetch.log"
 
@@ -45,7 +45,7 @@ else
     
     # 获取文件 URL
     FILE_DATE=$(date '+%Y-%m-%d')
-    HTML_URL="https://taurusggboy.github.io/openclaw-daily-cn/$(date '+%Y/%m/%d').html"
+    HTML_URL="https://taurusggboy.github.io/openclaw-daily-cn/posts/daily-$(date '+%Y-%m-%d').html"
     
     echo "✅ 已提交: $FILE_DATE"
     echo "✅ HTML: $HTML_URL"
