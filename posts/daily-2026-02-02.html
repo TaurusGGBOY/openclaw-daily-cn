@@ -1,31 +1,201 @@
 <!DOCTYPE html>
-<html>
-<head><title>OpenClaw Daily - 2026-02-02</title></head>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月02日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .back-home-top { text-align: right; margin-bottom: 10px; }
+        .back-home-top a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster { font-size: 60px; margin-bottom: 10px; }
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .news-item h2 { color: #333; font-size: 18px; margin-bottom: 12px; }
+        .news-item p { color: #666; line-height: 1.8; font-size: 15px; }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .news-item .meta span { color: #999; font-size: 13px; }
+        .back-home { text-align: center; margin: 20px 0; }
+        .back-home a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        .footer { text-align: center; padding: 30px; color: rgba(255,255,255,0.8); font-size: 14px; }
+        .nav { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+        }
+    </style>
+</head>
 <body>
-<h1>📰 OpenClaw 每日新闻 - 2026-02-02</h1>
-<ul>
-<li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.1.30">OpenClaw 2026.1.30 发布</a> - CLI 新增自动补全命令,添加 MiniMax OAuth 插件,修复安全漏洞 LFI,多项 Telegram/Discord 优化</li>
-<li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.1.29">OpenClaw 2026.1.29 发布</a> - 重大品牌重塑:更名为 OpenClaw,新增 Kimi K2.5 模型支持,Telegram 消息编辑/引用功能,LINE 渠道支持</li>
-<li><a href="https://openclaw.ai">OpenClaw 官方网站上线</a> - "The AI that actually does things" - 个人 AI 助手,可处理邮件、日历、航班值机等任务</li>
-<li><a href="https://github.com/openclaw/openclaw">OpenClaw GitHub 仓库</a> - 14.2k 星标,开源的个人 AI 助手项目,支持多平台 (WhatsApp/Telegram/Slack/Discord/iMessage)</li>
-<li><a href="https://x.com/steipete">@steipete 持续更新</a> - 项目创始人 Peter Steinberger 积极维护,社区活跃度高涨</li>
-<li><a href="https://docs.openclaw.ai">OpenClaw 文档中心</a> - 完整的安装指南、配置参考和开发文档</li>
-<li><a href="https://x.com/search?q=openclaw">社区热议 OpenClaw</a> - 被称"AGI 时刻","运行我的公司","iPhone 级别体验"等高度评价</li>
-<li><a href="https://github.com/openclaw/clawhub">ClawHub 技能市场</a> - 开源技能库,用户可分享和安装自定义技能</li>
-<li><a href="https://github.com/cloudflare/moltworker">Moltworker</a> - 在 Cloudflare Workers 上运行 OpenClaw 的解决方案</li>
-<li><a href="https://github.com/miaoxworld/OpenClawInstaller">OpenClawInstaller</a> - ClawdBot 一键部署工具,简化安装流程</li>
-</ul>
-<h2>🚀 快速开始</h2>
-<pre><code>npm install -g openclaw@latest
-openclaw onboard --install-daemon
-</code></pre>
-<h2>💬 社区反馈精选</h2>
-<ul>
-<li>"It's running my company." - @therno</li>
-<li>"Using @openclaw for a week and it genuinely feels like early AGI." - @tobi_bsf</li>
-<li>"2026 is already the year of personal agents." - @chrisdietr</li>
-<li>"OpenClaw is what you are looking for." - @zachknicker</li>
-</ul>
-<p>📅 数据来源: GitHub Releases, 官方网站, Twitter/X 社区讨论</p>
+    <div class="container">
+        <div class="back-home-top">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
+        </div>
+        <div class="nav">
+            <a href="../01/">← 昨日</a>
+            <a href="./">今日</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-02 · 自动更新</p>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h2>OpenClaw 2026.1.30 发布：CLI 新增自动补全命令</h2>
+                <p>最新版本带来多项优化：CLI 新增自动补全命令，添加 MiniMax OAuth 插件，修复安全漏洞 LFI，以及多项 Telegram/Discord 渠道优化。项目持续保持高频迭代。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.1.30" target="_blank">查看原文 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>OpenClaw 2026.1.29 发布：品牌重塑与模型升级</h2>
+                <p>该版本完成重大品牌重塑：项目正式更名为 OpenClaw，新增 Kimi K2.5 模型支持，优化 Telegram 消息编辑和引用功能，并新增 LINE 渠道支持。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.1.29" target="_blank">查看原文 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>OpenClaw 官方网站正式上线</h2>
+                <p>官方网站 openclaw.ai 上线，定位为"The AI that actually does things"。作为个人 AI 助手，OpenClaw 可处理邮件、日历、航班值机等日常任务。</p>
+                <div class="meta">
+                    <a href="https://openclaw.ai" target="_blank">访问官网 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>GitHub 仓库突破 14.2 万星标</h2>
+                <p>OpenClaw 开源仓库持续受到社区热捧，星标数突破 14.2 万。项目支持 WhatsApp、Telegram、Slack、Discord、iMessage 等多平台接入。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw" target="_blank">查看仓库 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>社区热议：被称为"AGI 时刻"</h2>
+                <p>社区用户高度评价："It's running my company"、"Using @openclaw for a week and it genuinely feels like early AGI"。用户称其为"2026 年的个人智能体元年"。</p>
+                <div class="meta">
+                    <a href="https://x.com/search?q=openclaw" target="_blank">查看讨论 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>ClawHub 技能市场开放</h2>
+                <p>ClawHub 技能市场已上线，这是开源技能库，用户可分享和安装自定义技能。极大扩展了 OpenClaw 的功能边界。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/clawhub" target="_blank">探索技能 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>Cloudflare Workers 部署方案发布</h2>
+                <p>Moltworker 项目发布，支持在 Cloudflare Workers 上运行 OpenClaw。为没有本地设备的用户提供了云端部署方案。</p>
+                <div class="meta">
+                    <a href="https://github.com/cloudflare/moltworker" target="_blank">了解详情 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>一键部署工具发布</h2>
+                <p>OpenClawInstaller 一键部署工具发布，简化安装流程，让更多用户可以快速上手体验本地 AI 助手。</p>
+                <div class="meta">
+                    <a href="https://github.com/miaoxworld/OpenClawInstaller" target="_blank">使用工具 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>文档中心更新</h2>
+                <p>OpenClaw 文档中心 docs.openclaw.ai 更新，新增完整的安装指南、配置参考和开发文档，帮助用户快速上手。</p>
+                <div class="meta">
+                    <a href="https://docs.openclaw.ai" target="_blank">阅读文档 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <h2>项目创始人持续活跃</h2>
+                <p>创始人 Peter Steinberger (@steipete) 持续维护项目，积极回复社区问题，推动 OpenClaw 快速发展。</p>
+                <div class="meta">
+                    <a href="https://x.com/steipete" target="_blank">关注更新 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">← 返回首页</a>
+        </div>
+        
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
+    </div>
 </body>
 </html>
