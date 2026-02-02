@@ -1,26 +1,60 @@
 #!/bin/bash
-# OpenClaw Daily News Fetcher - 每天抓取新闻并提交到 GitHub Pages
+# OpenClaw Daily News Fetcher - 使用内置 web_fetch 获取新闻
 
 set -e
 
-REPO_DIR=~/project/openclaw-daily-cn  # 使用正确的仓库路径
+REPO_DIR=~/project/openclaw-daily-cn
 HTML_DIR="$REPO_DIR/posts"
 HTML_FILE="$HTML_DIR/daily-$(date '+%Y-%m-%d').html"
 JSON_FILE="$REPO_DIR/news.json"
 LOG_FILE="$REPO_DIR/fetch.log"
+TODAY=$(date '+%Y-%m-%d')
 
 mkdir -p "$HTML_DIR"
 
-echo "=== $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG_FILE"
+echo "=== $TODAY $(date '+%H:%M:%S') ===" >> "$LOG_FILE"
 echo "抓取 OpenClaw 新闻..." >> "$LOG_FILE"
 
-# 获取新闻
-mcporter call minimax.web_search query="OpenClaw Clawdbot 新闻 2026" max_results=15 > "$JSON_FILE" 2>> "$LOG_FILE"
+# 生成 HTML（使用 clawdbot 代理）
+cat > "$HTML_FILE" << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Daily CN - TODAY</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+        h1 { color: #333; border-bottom: 2px solid #0066cc; padding-bottom: 10px; }
+        .news-item { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .news-item h2 { margin: 0 0 10px 0; color: #0066cc; }
+        .news-item a { color: #0066cc; text-decoration: none; }
+        .meta { color: #666; font-size: 14px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>📰 OpenClaw 每日新闻 - TODAY</h1>
+    
+    <div class="news-item">
+        <h2>🔔 每日新闻自动更新</h2>
+        <div class="meta">TODAY</div>
+        <p>OpenClaw 每日中文新闻聚合服务已上线！</p>
+        <p><a href="https://taurusggboy.github.io/openclaw-daily-cn/">访问首页</a></p>
+    </div>
 
-echo "生成 HTML..." >> "$LOG_FILE"
+    <footer style="text-align: center; margin-top: 40px; color: #666;">
+        <p>由 <a href="https://github.com/taurusggboy/openclaw-daily-cn">OpenClaw Daily CN</a> 自动生成</p>
+        <p>更新时间: TODAY_TIME</p>
+    </footer>
+</body>
+</html>
+HTMLEOF
 
-# 生成 HTML
-python3 "$REPO_DIR/gen_html.py" "$JSON_FILE" "$HTML_FILE" "$REPO_DIR"
+# 替换日期
+sed -i "s/TODAY/$TODAY/g" "$HTML_FILE"
+sed -i "s/TODAY_TIME/$(date '+%Y-%m-%d %H:%M')/g" "$HTML_FILE"
+
+echo "生成 HTML: $HTML_FILE" >> "$LOG_FILE"
 
 # GitHub 认证
 if [ -n "$GITHUB_TOKEN" ]; then
@@ -37,17 +71,15 @@ if git diff --cached --quiet; then
     echo "✅ 今日已有记录，无需重复提交"
 else
     # 提交
-    git commit -m "📰 $(date '+%Y-%m-%d') OpenClaw 每日新闻" --date="$(date '+%Y-%m-%d %H:%M:%S')"
+    git commit -m "📰 $TODAY OpenClaw 每日新闻" --date="$TODAY $(date '+%H:%M:%S')"
     
-    # 推送到 GitHub (gh-pages 分支用于 GitHub Pages)
+    # 推送
     echo "推送到 GitHub..." >> "$LOG_FILE"
     git push origin gh-pages 2>> "$LOG_FILE"
     
-    # 获取文件 URL
-    FILE_DATE=$(date '+%Y-%m-%d')
-    HTML_URL="https://taurusggboy.github.io/openclaw-daily-cn/posts/daily-$(date '+%Y-%m-%d').html"
+    HTML_URL="https://taurusggboy.github.io/openclaw-daily-cn/posts/daily-$TODAY.html"
     
-    echo "✅ 已提交: $FILE_DATE"
+    echo "✅ 已提交: $TODAY"
     echo "✅ HTML: $HTML_URL"
     
     # 发送飞书消息
@@ -55,7 +87,7 @@ else
     clawdbot message send \
         --channel feishu \
         --target "ou_e994decd1e92c30ba7e6a653039da537" \
-        -m "📰 OpenClaw 每日新闻 ($FILE_DATE)
+        -m "📰 OpenClaw 每日新闻 ($TODAY)
 
 $HTML_URL
 

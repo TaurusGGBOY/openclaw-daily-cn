@@ -23,3 +23,25 @@
 生成 HTML...
 没有新内容，跳过提交
 完成!
+=== 2026-02-02 08:57:04 ===
+抓取 OpenClaw 新闻...
+[mcporter] Unknown MCP server 'minimax'.
+Error: Unknown MCP server 'minimax'.
+    at McpRuntime.connect (file:///opt/homebrew/lib/node_modules/mcporter/dist/runtime.js:175:19)
+    at McpRuntime.callTool (file:///opt/homebrew/lib/node_modules/mcporter/dist/runtime.js:124:43)
+    at attemptCall (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli/call-command.js:243:50)
+    at invokeWithAutoCorrection (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli/call-command.js:239:12)
+    at handleCall (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli/call-command.js:77:28)
+    at async runCli (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli.js:143:13)
+    at async main (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli.js:201:5)
+=== 2026-02-02 08:57:08 ===
+抓取 OpenClaw 新闻...
+[mcporter] Unknown MCP server 'minimax'.
+Error: Unknown MCP server 'minimax'.
+    at McpRuntime.connect (file:///opt/homebrew/lib/node_modules/mcporter/dist/runtime.js:175:19)
+    at McpRuntime.callTool (file:///opt/homebrew/lib/node_modules/mcporter/dist/runtime.js:124:43)
+    at attemptCall (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli/call-command.js:243:50)
+    at invokeWithAutoCorrection (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli/call-command.js:239:12)
+    at handleCall (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli/call-command.js:77:28)
+    at async runCli (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli.js:143:13)
+    at async main (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli.js:201:5)
