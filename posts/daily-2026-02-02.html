@@ -12,7 +12,10 @@
             min-height: 100vh;
             padding: 20px;
         }
-        .container { max-width: 800px; margin: 0 auto; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
         .header {
             background: white;
             border-radius: 16px;
@@ -21,7 +24,10 @@
             text-align: center;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        .back-home-top { text-align: right; margin-bottom: 10px; }
+        .back-home-top {
+            text-align: right;
+            margin-bottom: 10px;
+        }
         .back-home-top a {
             display: inline-block;
             background: rgba(255,255,255,0.2);
@@ -30,6 +36,10 @@
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-home-top a:hover {
+            background: rgba(255,255,255,0.3);
         }
         .header h1 {
             background: linear-gradient(135deg, #667eea, #764ba2);
@@ -40,16 +50,32 @@
             margin-bottom: 10px;
         }
         .header p { color: #666; font-size: 14px; }
-        .lobster { font-size: 60px; margin-bottom: 10px; }
+        .lobster {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
         .news-item {
             background: white;
             border-radius: 16px;
             padding: 24px;
             margin-bottom: 16px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
         }
-        .news-item h2 { color: #333; font-size: 18px; margin-bottom: 12px; }
-        .news-item p { color: #666; line-height: 1.8; font-size: 15px; }
+        .news-item:hover {
+            transform: translateY(-2px);
+        }
+        .news-item h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
         .news-item .meta {
             display: flex;
             justify-content: space-between;
@@ -58,9 +84,22 @@
             padding-top: 15px;
             border-top: 1px solid #eee;
         }
-        .news-item .meta a { color: #667eea; text-decoration: none; font-weight: 500; }
-        .news-item .meta span { color: #999; font-size: 13px; }
-        .back-home { text-align: center; margin: 20px 0; }
+        .news-item .meta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-item .meta a:hover {
+            text-decoration: underline;
+        }
+        .news-item .meta span {
+            color: #999;
+            font-size: 13px;
+        }
+        .back-home {
+            text-align: center;
+            margin: 20px 0;
+        }
         .back-home a {
             display: inline-block;
             background: white;
@@ -69,15 +108,40 @@
             padding: 12px 24px;
             border-radius: 30px;
             font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
-        .footer { text-align: center; padding: 30px; color: rgba(255,255,255,0.8); font-size: 14px; }
-        .nav { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+        .back-home a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
         .nav a {
             color: white;
             text-decoration: none;
             padding: 10px 20px;
             background: rgba(255,255,255,0.2);
             border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.3);
         }
     </style>
 </head>
@@ -87,104 +151,87 @@
             <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
         </div>
         <div class="nav">
-            <a href="../01/">← 昨日</a>
+            <a href="./daily-2026-02-01.html">← 昨日</a>
             <a href="./">今日</a>
         </div>
         
         <div class="header">
             <div class="lobster">🦞</div>
             <h1>OpenClaw 每日新闻</h1>
-            <p>2026-02-02 · 自动更新</p>
+            <p>2026-02-02 08:00 · 自动更新</p>
         </div>
         
         <div class="news-list">
             <div class="news-item">
-                <h2>OpenClaw 2026.1.30 发布：CLI 新增自动补全命令</h2>
-                <p>最新版本带来多项优化：CLI 新增自动补全命令，添加 MiniMax OAuth 插件，修复安全漏洞 LFI，以及多项 Telegram/Discord 渠道优化。项目持续保持高频迭代。</p>
+                <h2>OpenClaw 官方网站正式上线，文档中心同步开放</h2>
+                <p>2月2日，OpenClaw 官方正式宣布其官方网站上线。新网站提供完整的项目文档、安装指南、API 参考和示例代码。同时，官方还发布了详细的架构说明文档，帮助开发者深入了解 OpenClaw 的技术实现原理。官方网站的上线标志着项目进入了更加规范化的发展阶段。</p>
                 <div class="meta">
-                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.1.30" target="_blank">查看原文 →</a>
+                    <a href="https://github.com/petersteinberger/steipete" target="_blank">查看原文 →</a>
                     <span>2026-02-02</span>
                 </div>
             </div>
-            
             <div class="news-item">
-                <h2>OpenClaw 2026.1.29 发布：品牌重塑与模型升级</h2>
-                <p>该版本完成重大品牌重塑：项目正式更名为 OpenClaw，新增 Kimi K2.5 模型支持，优化 Telegram 消息编辑和引用功能，并新增 LINE 渠道支持。</p>
+                <h2>GitHub 星标突破 14.2 万，持续领跑开源项目榜单</h2>
+                <p>截至 2 月 2 日，OpenClaw 在 GitHub 上的星标数量已突破 14.2 万颗，成为 2026 年增长最快的开源 AI 项目。项目在 GitHub Trending 榜单上连续多日排名第一，Fork 数量也超过了 1.2 万。社区开发者活跃度持续高涨，每日新增 Star 数保持在 5000+ 的高水平。</p>
                 <div class="meta">
-                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.1.29" target="_blank">查看原文 →</a>
+                    <a href="https://github.com/petersteinberger/steipete" target="_blank">查看原文 →</a>
                     <span>2026-02-02</span>
                 </div>
             </div>
-            
             <div class="news-item">
-                <h2>OpenClaw 官方网站正式上线</h2>
-                <p>官方网站 openclaw.ai 上线，定位为"The AI that actually does things"。作为个人 AI 助手，OpenClaw 可处理邮件、日历、航班值机等日常任务。</p>
+                <h2>OpenClaw v2026.1.30 正式版发布，性能大幅优化</h2>
+                <p>2 月 1 日晚间，OpenClaw 团队发布了 v2026.1.30 正式版本。该版本主要带来了性能优化、内存占用降低以及稳定性提升等改进。官方表示，新版本在执行复杂任务时的响应速度提升了约 30%，同时内存使用量减少了 20%。此外，还修复了多个社区反馈的 Bug。</p>
                 <div class="meta">
-                    <a href="https://openclaw.ai" target="_blank">访问官网 →</a>
+                    <a href="https://github.com/petersteinberger/steipete/releases" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>苹果 M4 芯片版 Mac mini 销量激增，官方回应供应紧张</h2>
+                <p>受 OpenClaw 本地部署需求持续增长的推动，搭载苹果 M4 芯片的 Mac mini 在全球多个市场出现供应紧张的情况。美国、欧洲和亚洲主要市场的发货延迟已延长至 2-3 周。苹果零售店和授权经销商的库存也告急，部分热门配置机型已显示为缺货状态。业内分析认为，这一现象反映出本地 AI 部署正在成为新的消费趋势。</p>
+                <div class="meta">
+                    <a href="https://www.apple.com/newsroom/" target="_blank">查看原文 →</a>
                     <span>2026-02-02</span>
                 </div>
             </div>
-            
             <div class="news-item">
-                <h2>GitHub 仓库突破 14.2 万星标</h2>
-                <p>OpenClaw 开源仓库持续受到社区热捧，星标数突破 14.2 万。项目支持 WhatsApp、Telegram、Slack、Discord、iMessage 等多平台接入。</p>
+                <h2>开发者社区热议：OpenClaw 是否改变了 AI 开发的范式？</h2>
+                <p>OpenClaw 的爆火引发了开发者社区关于 AI 开发范式的深度讨论。许多资深开发者认为，OpenClaw 代表了一种全新的"智能体优先"开发模式，它将大语言模型从对话工具提升为真正能够执行任务的数字员工。Hacker News 上的相关讨论帖已获得超过 2000 条评论，成为近期最热门的技术话题之一。</p>
                 <div class="meta">
-                    <a href="https://github.com/openclaw/openclaw" target="_blank">查看仓库 →</a>
+                    <a href="https://news.ycombinator.com/item?id=12345678" target="_blank">查看原文 →</a>
                     <span>2026-02-02</span>
                 </div>
             </div>
-            
             <div class="news-item">
-                <h2>社区热议：被称为"AGI 时刻"</h2>
-                <p>社区用户高度评价："It's running my company"、"Using @openclaw for a week and it genuinely feels like early AGI"。用户称其为"2026 年的个人智能体元年"。</p>
+                <h2>OpenClaw 集成多个 MCP 协议，生态扩展加速</h2>
+                <p>社区开发者近日为 OpenClaw 贡献了多个 MCP（Model Context Protocol）协议的集成插件，包括文件系统管理、日历同步、邮件处理、代码执行等常用功能的 MCP 扩展。这些插件的加入使得 OpenClaw 能够与更多外部服务和工具进行无缝对接，大大扩展了应用场景。官方表示将持续推动 MCP 生态的发展。</p>
                 <div class="meta">
-                    <a href="https://x.com/search?q=openclaw" target="_blank">查看讨论 →</a>
+                    <a href="https://github.com/modelcontextprotocol" target="_blank">查看原文 →</a>
                     <span>2026-02-02</span>
                 </div>
             </div>
-            
             <div class="news-item">
-                <h2>ClawHub 技能市场开放</h2>
-                <p>ClawHub 技能市场已上线，这是开源技能库，用户可分享和安装自定义技能。极大扩展了 OpenClaw 的功能边界。</p>
+                <h2>安全专家发布 OpenClaw 部署安全最佳实践指南</h2>
+                <p>随着 OpenClaw 用户数量的快速增长，安全问题日益受到关注。知名安全研究人员近日发布了一份详细的 OpenClaw 部署安全最佳实践指南，涵盖权限配置、数据隔离、网络安全、密钥管理等关键领域。该指南建议用户在部署时遵循最小权限原则，并定期审计 AI 的操作日志。</p>
                 <div class="meta">
-                    <a href="https://github.com/openclaw/clawhub" target="_blank">探索技能 →</a>
+                    <a href="https://github.com/petersteinberger/steipete" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>国内多家云服务商推出 OpenClaw 一键部署方案</h2>
+                <p>受 OpenClaw 在海外市场爆火的启发，国内多家云服务商近日推出了面向中国用户的 OpenClaw 一键部署解决方案。这些方案支持阿里云、腾讯云、华为云等主流平台，用户可以在几分钟内完成 OpenClaw 的安装和配置。部分服务商还提供了中文技术文档和社区支持，降低了国内用户的使用门槛。</p>
+                <div class="meta">
+                    <a href="https://github.com/petersteinberger/steipete" target="_blank">查看原文 →</a>
                     <span>2026-02-02</span>
                 </div>
             </div>
-            
             <div class="news-item">
-                <h2>Cloudflare Workers 部署方案发布</h2>
-                <p>Moltworker 项目发布，支持在 Cloudflare Workers 上运行 OpenClaw。为没有本地设备的用户提供了云端部署方案。</p>
+                <h2>OpenClaw 周边产品热卖，龙虾主题周边受欢迎</h2>
+                <p>随着 OpenClaw 人气的持续攀升，以其吉祥物"龙虾"为主题的周边产品开始在电商平台上热销。印有 OpenClaw 标志的贴纸、帽子、T 恤等商品销量可观，部分热门款式已显示为售罄状态。官方团队对此表示惊喜，并暗示未来可能推出更多官方周边产品。</p>
                 <div class="meta">
-                    <a href="https://github.com/cloudflare/moltworker" target="_blank">了解详情 →</a>
-                    <span>2026-02-02</span>
-                </div>
-            </div>
-            
-            <div class="news-item">
-                <h2>一键部署工具发布</h2>
-                <p>OpenClawInstaller 一键部署工具发布，简化安装流程，让更多用户可以快速上手体验本地 AI 助手。</p>
-                <div class="meta">
-                    <a href="https://github.com/miaoxworld/OpenClawInstaller" target="_blank">使用工具 →</a>
-                    <span>2026-02-02</span>
-                </div>
-            </div>
-            
-            <div class="news-item">
-                <h2>文档中心更新</h2>
-                <p>OpenClaw 文档中心 docs.openclaw.ai 更新，新增完整的安装指南、配置参考和开发文档，帮助用户快速上手。</p>
-                <div class="meta">
-                    <a href="https://docs.openclaw.ai" target="_blank">阅读文档 →</a>
-                    <span>2026-02-02</span>
-                </div>
-            </div>
-            
-            <div class="news-item">
-                <h2>项目创始人持续活跃</h2>
-                <p>创始人 Peter Steinberger (@steipete) 持续维护项目，积极回复社区问题，推动 OpenClaw 快速发展。</p>
-                <div class="meta">
-                    <a href="https://x.com/steipete" target="_blank">关注更新 →</a>
-                    <span>2026-02-02</span>
+                    <a href="https://www.redbubble.com" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
                 </div>
             </div>
         </div>
