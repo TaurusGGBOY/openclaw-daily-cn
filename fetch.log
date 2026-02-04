@@ -45,3 +45,5 @@ Error: Unknown MCP server 'minimax'.
     at handleCall (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli/call-command.js:77:28)
     at async runCli (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli.js:143:13)
     at async main (file:///opt/homebrew/lib/node_modules/mcporter/dist/cli.js:201:5)
+=== 2026-02-02 14:05:27 ===
+抓取 OpenClaw 新闻...

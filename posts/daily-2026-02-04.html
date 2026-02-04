@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月04日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .back-home-top {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .back-home-top a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-home-top a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .news-item:hover {
+            transform: translateY(-2px);
+        }
+        .news-item h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-item .meta a:hover {
+            text-decoration: underline;
+        }
+        .news-item .meta span {
+            color: #999;
+            font-size: 13px;
+        }
+        .back-home {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-home a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .back-home a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .section-title {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 22px;
+            margin: 30px 0 20px 0;
+            padding: 20px 0 10px 0;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+        }
+        .skill-item {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .skill-item:hover {
+            transform: translateY(-2px);
+        }
+        .skill-item h3 {
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .skill-item p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        .skill-stats {
+            display: flex;
+            gap: 15px;
+            color: #999;
+            font-size: 12px;
+        }
+        .skill-stats span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-home-top">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
+        </div>
+        <div class="nav">
+            <a href="../02-03/index.html">← 昨日</a>
+            <a href="./">今日</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-04 08:00 · 自动更新</p>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h2>玩转OpenClaw云上OpenClaw(Clawdbot)最全实践教程合辑</h2>
+                <p>还没有一台OpenClaw云服务器,点此即可享OpenClaw专属优惠,一键秒级部署,可视化面板快速接入QQ、企微、飞书、钉钉等IM应用,同时支持海外Discord、WhatsApp、Telegram等应用。包含新手必看部署教程、Discord接入指南等完整配置步骤。</p>
+                <div class="meta">
+                    <a href="https://cloud.tencent.com/developer/article/2624973" target="_blank">查看原文 →</a>
+                    <span>2026-02-04</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>传媒行业动态跟踪:Clawdbot更名OpenClaw新起点</h2>
+                <p>据AI寒武纪,开源个人AI助手项目Clawdbot正式宣布其最终名称为"OpenClaw"。项目推荐使用Anthropic Pro/Max搭配Opus 4.5,因为它在长上下文处理方面表现更强,并具有更好的抗提示词注入能力。国内方面,MiniMax即接入其技术生态,为开发者提供模型能力层面的支持。</p>
+                <div class="meta">
+                    <a href="https://stock.stockstar.com/JC2026020200006099.shtml" target="_blank">查看原文 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Clawdbot爆红带动Mac mini销量,Linux服务器需求激增</h2>
+                <p>根据澎湃新闻,Clawdbot让已经卖了一年多的M4 Mac mini海外社区迎来了一波明显的订单高峰,这主要是由于Mac系统深度集成了iMessage,同时它的功耗相对较低,能长时间运行。Linux服务器方面,云厂商积极推出Linux服务器用于支持Clawdbot的服务,因为Claude擅长写Linux Bash命令,适配性较好。</p>
+                <div class="meta">
+                    <a href="https://www.thepaper.cn/newsDetail_forward_32499606" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw重磅官宣:Kimi K2.5模型全面免费开放</h2>
+                <p>在2026年,AI智能体领域迎来了一则振奋人心的消息:OpenClaw正式宣布,其备受关注的Kimi K2.5模型及其相关编码能力将免费供用户调用。这一举措标志着OpenClaw在开源生态建设方面迈出了重要一步。Kimi K2.5在多个权威榜单中均名列全球开源模型前茅。</p>
+                <div class="meta">
+                    <a href="https://www.sohu.com/a/982512112_121956424" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Clawdbot开发者Peter Steinberger:退休三年后重返技术领域</h2>
+                <p>Clawdbot的开发者是奥地利开发者Peter Steinberger。这位连续创业者曾创立PSPDFKit公司,开发出全球领先的PDF处理框架,服务客户包括苹果、Adobe等科技巨头。2021年,他以约1亿欧元的价格出售公司股份后宣布退休,但四年后因"创作欲望"重返技术领域。</p>
+                <div class="meta">
+                    <a href="https://news.znds.com/article/news/69257.html" target="_blank">查看原文 →</a>
+                    <span>2026-01-30</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>枫清科技首发中国版OpenClaw"龙虾",主打本地安全</h2>
+                <p>枫清科技(Fabarta)近期推出搭载Fabarta个人专属智能体的基于苹果Mac mini预装版,主打"开箱即用、本地安全、数据永不离开设备"的超性价比解决方案。该产品依托Apple Silicon(M4)平台的高能效算力,联合国际头部产业伙伴推进落地交付,让本地AI从"能跑"走向"好用、可管、可规模化部署"。</p>
+                <div class="meta">
+                    <a href="http://sc.stock.cnfol.com/gushiyaowen/20260131/31989192.shtml" target="_blank">查看原文 →</a>
+                    <span>2026-01-31</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>AI助手OpenClaw爆火:一个24小时不休息的数字管家</h2>
+                <p>普通AI只会教你如何整理文件,OpenClaw可以直接上手实操。业内人士表示,OpenClaw的走红正在成为一个极具代表性的样本:在强大的基础模型之上,一个理解"模型语言"的个体开发者,其生产力已足以挑战传统软件开发模式。</p>
+                <div class="meta">
+                    <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_766697e1b8c73352" target="_blank">查看原文 →</a>
+                    <span>2026-01-31</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw GitHub星标突破12万,官网访问量超200万</h2>
+                <p>截至1月31日,该项目在GitHub上的星标数量已超过12万个,官网累计访问量突破200万人次,成为近期增长最快的开源技术项目之一。OpenClaw通过构建"智能体"作为中枢,系统性地整合了大语言模型的语义理解与任务规划能力、操作系统的自动化工具以及本地持久化存储。</p>
+                <div class="meta">
+                    <a href="https://k.sina.com.cn/article_7857201856_1d45362c001901xmeg.html" target="_blank">查看原文 →</a>
+                    <span>2026-02-01</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Clawdbot五天狂飙10万Star,引发安全与权限讨论</h2>
+                <p>这款现象级产品并非出自科技巨头或资本加持的独角兽企业,而是由有着iOS开发背景的工程师Peter Steinberger打造。但同时,权限失控、数据裸奔与安全漏洞的风险也引发社区广泛讨论,成为这一波AI Agent热潮中值得关注的话题。</p>
+                <div class="meta">
+                    <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_897697c7cca35852" target="_blank">查看原文 →</a>
+                    <span>2026-01-30</span>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="section-title">🔥 热门技能推荐</h2>
+        
+        <div class="skills-list">
+            <div class="skill-item">
+                <h3>🍽️ eat-tracker - 饮食记录助手</h3>
+                <p>通过飞书记录饮食信息到多维表格,支持智能解析食物、价格、时间、商店、同伴,AI图片识别店名,本地图片上传到云文档。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">生活助手</span>
+                    <span class="skill-tag">飞书集成</span>
+                    <span class="skill-tag">AI识别</span>
+                </div>
+                <div class="skill-stats">
+                    <span>📅 2026-02-03</span>
+                    <span>⭐ 125</span>
+                    <span>⬇️ 89</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>🤖 claude-code-wingman - Claude Code 助手</h3>
+                <p>通过 tmux 控制 Claude Code 终端会话,dispatch 编码任务,让免费和工作付费的 Claude Code 协同工作,最小化 Clawdbot API 成本。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">编程助手</span>
+                    <span class="skill-tag">成本优化</span>
+                    <span class="skill-tag">终端集成</span>
+                </div>
+                <div class="skill-stats">
+                    <span>📅 2026-01-31</span>
+                    <span>⭐ 234</span>
+                    <span>⬇️ 156</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>📊 data-plotting - 数据可视化</h3>
+                <p>使用 Python (pandas + matplotlib) 从 CSV/JSON 数据生成紧凑的表格图片,非常适合在飞书、WhatsApp 等平台显示手机友好的图表。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">数据可视化</span>
+                    <span class="skill-tag">图表生成</span>
+                    <span class="skill-tag">手机友好</span>
+                </div>
+                <div class="skill-stats">
+                    <span>📅 2026-01-30</span>
+                    <span>⭐ 312</span>
+                    <span>⬇️ 203</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>🔍 minimax-websearch - MiniMax 实时搜索</h3>
+                <p>使用 MiniMax Coding Plan MCP 进行实时网络搜索,无需 Brave API Key,支持搜索最新新闻、价格、天气等实时信息。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">实时搜索</span>
+                    <span class="skill-tag">网络工具</span>
+                    <span class="skill-tag">AI 搜索</span>
+                </div>
+                <div class="skill-stats">
+                    <span>📅 2026-02-02</span>
+                    <span>⭐ 189</span>
+                    <span>⬇️ 134</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>🧠 self-improving-agent - 自改进代理</h3>
+                <p>通过对话分析提取学习内容,将纠正和成功模式永久编码到代理定义中。实现"纠正一次,永不重复"的持续改进能力。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">AI 学习</span>
+                    <span class="skill-tag">自我改进</span>
+                    <span class="skill-tag">记忆系统</span>
+                </div>
+                <div class="skill-stats">
+                    <span>📅 2026-02-01</span>
+                    <span>⭐ 278</span>
+                    <span>⬇️ 167</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">← 返回首页</a>
+        </div>
+        
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
+    </div>
+</body>
+</html>
