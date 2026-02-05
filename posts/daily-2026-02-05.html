@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月05日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster { font-size: 60px; margin-bottom: 10px; }
+        .section-title {
+            background: white;
+            border-radius: 16px 16px 0 0;
+            padding: 20px 24px;
+            margin-bottom: 2px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .section-title h2 { color: #333; font-size: 20px; }
+        .news-item {
+            background: white;
+            padding: 24px;
+            margin-bottom: 2px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .news-item:last-of-type {
+            border-radius: 0 0 16px 16px;
+            margin-bottom: 30px;
+        }
+        .news-item h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-item .meta a:hover { text-decoration: underline; }
+        .news-item .meta span { color: #999; font-size: 13px; }
+        .skills-section {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .skills-section h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+        }
+        .skill-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .skill-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .skill-item h4 {
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .skill-item .description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .skill-item .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .skill-item .tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .skill-item .stats { color: #999; font-size: 12px; }
+        .skill-item .stats span { margin-right: 15px; }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+        }
+        .nav a:hover { background: rgba(255,255,255,0.3); }
+        .back-link {
+            display: block;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="../../index.html">← 返回首页</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-05 08:00 · 自动更新</p>
+        </div>
+        
+        <div class="section-title">
+            <h2>📰 今日新闻</h2>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h3>爆火AI智能体OpenClaw被发现严重漏洞,可传播/植入macOS病毒</h3>
+                <p>IT之家 2 月4日消息,密码管理工具 1Password 安全团队发现有攻击者利用 OpenClaw 向 macOS 用户散播和植入恶意软件。攻击者利用 Skills 文件被伪装成合法集成教程,诱导用户运行 Shell 命令。植入的有效载荷为信息窃取类恶意软件。</p>
+                <div class="meta">
+                    <a href="https://k.sina.com.cn/article_5953466437_162dab0450670a0yha.html" target="_blank">查看原文 →</a>
+                    <span>2026-02-04</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h3>Clawdbot数小时内两度更名最终定名OpenClaw</h3>
+                <p>开源AI智能体Clawdbot在数小时内连续两次更名,短暂改为Moltbot后,最终定名为OpenClaw。更名源于AI巨头Anthropic的施压,原名称与该公司Claude模型过于相似。OpenClaw定位为开源个人AI助手,主打"数字员工"概念。</p>
+                <div class="meta">
+                    <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_533697d895f83752" target="_blank">查看原文 →</a>
+                    <span>2026-01-31</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h3>深度丨Clawdbot成全球Agent新宠,将今年规模化期待推向高峰</h3>
+                <p>2026开年的科技圈被一只"红色龙虾"搅得沸沸扬扬。Clawdbot在短短数日内引爆全球极客社区。项目经过两次改名,最终定名为OpenClaw,强调"开源、开放、社区驱动"的初心。</p>
+                <div class="meta">
+                    <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_63469833e8575352" target="_blank">查看原文 →</a>
+                    <span>2026-02-04</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h3>枫清科技中国版OpenClaw定义本地AI生产力</h3>
+                <p>枫清科技(Fabarta)推出搭载Fabarta个人专属智能体的苹果Mac mini预装版,主打"开箱即用、本地安全、数据永不离开设备"的解决方案。该方案依托Apple Silicon(M4)平台高能算力。</p>
+                <div class="meta">
+                    <a href="http://www.sohu.com/a/982678376_120285954" target="_blank">查看原文 →</a>
+                    <span>2026-02-02</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h3>计算机行业事件点评:AI"杀手级"应用的雏形</h3>
+                <p>Clawdbot上线后迅速走红,阿里巴巴、腾讯和优刻得等国内云厂商竞相展开深度生态合作,正式拉开了AI Agent时代的序幕。它标志着AI从"对话工具"向"自主作业"实现了跨代飞跃。</p>
+                <div class="meta">
+                    <a href="http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/823397122210/index.phtml" target="_blank">查看原文 →</a>
+                    <span>2026-02-03</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h3>Clawdbot开发背景:奥地利工程师Peter Steinberger</h3>
+                <p>Clawdbot的开发者是奥地利开发者Peter Steinberger,曾创立PSPDFKit公司,服务客户包括苹果、Adobe等科技巨头。2021年以约1亿欧元出售公司股份后退休,2025年因"创作欲望"重返技术领域。</p>
+                <div class="meta">
+                    <a href="https://news.znds.com/article/news/69257.html" target="_blank">查看原文 →</a>
+                    <span>2026-01-30</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h3>Clawdbot爆红:24小时不休息的"数字管家"</h3>
+                <p>这款个人AI代理工具能运行在本地设备上,通过WhatsApp、Telegram、Discord等聊天App与之互动。它不仅能聊天,更能"做事":管理邮箱、日程、自动化任务、浏览网页、执行脚本等。</p>
+                <div class="meta">
+                    <a href="https://www.thepaper.cn/newsDetail_forward_32499606" target="_blank">查看原文 →</a>
+                    <span>2026-02-03</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h3>开源AI智能体Clawdbot星标破13万</h3>
+                <p>Clawdbot(OpenClaw)在GitHub上线后星标数迅速突破13.6万,成为2026年初增长最快的开源项目之一。腾讯云、阿里云及优刻得等国内云厂商已相继上线云端极简部署服务。</p>
+                <div class="meta">
+                    <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_1896982bf3848352" target="_blank">查看原文 →</a>
+                    <span>2026-02-04</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skills-section">
+            <h2>🚀 热门技能推荐</h2>
+            
+            <div class="skill-item">
+                <h4>Apple Notes</h4>
+                <p class="description">管理Apple Notes的CLI工具,支持创建、查看、编辑、删除、搜索、移动和导出笔记。</p>
+                <div class="tags">
+                    <span class="tag">效率工具</span>
+                    <span class="tag">笔记管理</span>
+                </div>
+                <div class="stats">
+                    <span>📅 发布: 2026-01-15</span>
+                    <span>⬇️ 下载: 2.3k</span>
+                    <span>⭐ Star: 156</span>
+                    <span>📦 Install: 1.2k</span>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <h4>Eat Tracker</h4>
+                <p class="description">通过飞书记录饮食信息到多维表格,支持图片识别店名、智能解析文字内容。</p>
+                <div class="tags">
+                    <span class="tag">生活助手</span>
+                    <span class="tag">飞书集成</span>
+                </div>
+                <div class="stats">
+                    <span>📅 发布: 2026-02-03</span>
+                    <span>⬇️ 下载: 856</span>
+                    <span>⭐ Star: 89</span>
+                    <span>📦 Install: 534</span>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <h4>Deepwork Tracker</h4>
+                <p class="description">追踪深度工作 sessions,生成GitHub贡献图风格的分钟热力图,支持Telegram分享。</p>
+                <div class="tags">
+                    <span class="tag">生产力</span>
+                    <span class="tag">时间管理</span>
+                </div>
+                <div class="stats">
+                    <span>📅 发布: 2026-01-28</span>
+                    <span>⬇️ 下载: 1.5k</span>
+                    <span>⭐ Star: 203</span>
+                    <span>📦 Install: 892</span>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <h4>Weather</h4>
+                <p class="description">获取当前天气和天气预报,无需API Key,支持未来几天的天气预报。</p>
+                <div class="tags">
+                    <span class="tag">生活助手</span>
+                    <span class="tag">天气查询</span>
+                </div>
+                <div class="stats">
+                    <span>📅 发布: 2026-01-20</span>
+                    <span>⬇️ 下载: 3.2k</span>
+                    <span>⭐ Star: 412</span>
+                    <span>📦 Install: 2.1k</span>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <h4>Home Assistant</h4>
+                <p class="description">控制Home Assistant智能家居设备,支持智能插头、灯光、场景和自动化。</p>
+                <div class="tags">
+                    <span class="tag">智能家居</span>
+                    <span class="tag">IoT控制</span>
+                </div>
+                <div class="stats">
+                    <span>📅 发布: 2026-01-25</span>
+                    <span>⬇️ 下载: 1.8k</span>
+                    <span>⭐ Star: 267</span>
+                    <span>📦 Install: 1.1k</span>
+                </div>
+            </div>
+        </div>
+        
+        <a class="back-link" href="../../index.html">← 返回首页</a>
+        
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
+    </div>
+</body>
+</html>
