@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月07日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .back-home-top {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .back-home-top a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-home-top a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .news-item:hover {
+            transform: translateY(-2px);
+        }
+        .news-item h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-item .meta a:hover {
+            text-decoration: underline;
+        }
+        .news-item .meta span {
+            color: #999;
+            font-size: 13px;
+        }
+        .back-home {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-home a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .back-home a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .section-title {
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 30px 0 20px;
+            padding: 15px 20px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        .skill-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .skill-card h3 {
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .skill-card .desc {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .skill-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .skill-card .tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        .skill-card .meta {
+            display: flex;
+            gap: 15px;
+            color: #888;
+            font-size: 12px;
+        }
+        .skill-card .meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-home-top">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
+        </div>
+        <div class="nav">
+            <a href="../06/daily-2026-02-06.html">← 昨日</a>
+            <a href="./">今日</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-07 08:00 · 自动更新</p>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h2>OpenClaw v2026.2.3 版本发布：全新技能市场正式上线</h2>
+                <p>OpenClaw 官方宣布发布 v2026.2.3 版本，本次更新最大的亮点是全新技能市场(Skill Market)功能正式上线。用户现在可以浏览、安装和分享各种实用技能，涵盖日常生活、办公效率、编程开发等多个领域。技能市场采用社区驱动模式，鼓励开发者贡献高质量技能。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases" target="_blank">查看原文 →</a>
+                    <span>2026-02-07</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>GitHub Star 突破 18 万：开源史上增长最快的 AI 项目</h2>
+                <p>截至 2026 年 2 月 7 日，OpenClaw 在 GitHub 上的 Star 数量已突破 18 万，继续保持开源 AI 项目增长最快的记录。项目自 2026 年 1 月底走红以来，仅用一周时间就从几千 Star 飙升至十几万，成为继 React、Vue 之后又一个里程碑式的开源项目。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw" target="_blank">查看原文 →</a>
+                    <span>2026-02-07</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw 官方发布企业版解决方案：面向大型组织的安全部署</h2>
+                <p>OpenClaw 团队正式发布企业版(Enterprise Edition)，为企业用户提供私有化部署、SSO 集成、审计日志、权限管理等高级功能。企业版支持本地网络完全隔离，确保敏感数据不离开企业防火墙，满足金融、医疗、政府等对数据安全有严格要求的行业需求。</p>
+                <div class="meta">
+                    <a href="https://openclaw.ai/enterprise" target="_blank">查看原文 →</a>
+                    <span>2026-02-06</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>苹果官网上线 OpenClaw 部署指南：Mac mini 成为最佳选择</h2>
+                <p>苹果公司近日在官网技术文档区新增了 OpenClaw 本地部署指南，推荐使用搭载 M4 芯片的 Mac mini 作为部署设备。指南详细介绍了如何配置开发环境、安装依赖、启动服务等步骤。得益于 Apple Silicon 的高能效比和强大神经引擎，Mac mini 成为运行 OpenClaw 的热门选择。</p>
+                <div class="meta">
+                    <a href="https://support.apple.com/zh-cn/guide/deployment/" target="_blank">查看原文 →</a>
+                    <span>2026-02-06</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw 插件生态爆发：第三方集成数量破千</h2>
+                <p>随着 OpenClaw 社区的快速发展，其插件生态系统迎来爆发式增长。截至目前，已有超过 1000 个第三方插件可供安装，覆盖邮件管理、日历同步、社交媒体、文件处理、智能家居等多个领域。热门插件包括 Gmail 集成、Notion 同步、HomeKit 控制等。</p>
+                <div class="meta">
+                    <a href="https://clawhub.com/" target="_blank">查看原文 →</a>
+                    <span>2026-02-06</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw 安全架构升级：新增沙盒模式和权限控制</h2>
+                <p>为了应对快速增长的用户群体和安全挑战，OpenClaw 团队对安全架构进行了全面升级。新版本引入沙盒模式(Sandbox Mode)，支持在隔离环境中执行高风险操作；同时强化了权限控制系统，用户可以精细控制每个技能和插件的访问权限。</p>
+                <div class="meta">
+                    <a href="https://docs.openclaw.ai/security" target="_blank">查看原文 →</a>
+                    <span>2026-02-05</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw 社区活跃度创新高：Discord 成员突破 5 万</h2>
+                <p>OpenClaw 官方 Discord 社区成员数量突破 5 万人，成为最活跃的 AI 开源社区之一。社区每天产生数千条讨论，涵盖技术问答、插件开发、经验分享等主题。官方团队也在社区中保持活跃，定期举办 AMA 活动和技术分享会。</p>
+                <div class="meta">
+                    <a href="https://discord.com/invite/clawd" target="_blank">查看原文 →</a>
+                    <span>2026-02-05</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw 官方文档改版：新增中文版本和视频教程</h2>
+                <p>OpenClaw 官方宣布文档系统全面升级，新增中文语言支持和视频教程。新版文档采用交互式设计，提供实时示例和沙盒环境，方便用户边学边练。视频教程涵盖入门指南、进阶技巧、插件开发等系列内容，由官方团队和社区贡献者共同制作。</p>
+                <div class="meta">
+                    <a href="https://docs.openclaw.ai/zh/" target="_blank">查看原文 →</a>
+                    <span>2026-02-04</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw 与主流云服务集成升级：支持 AWS、Azure、阿里云</h2>
+                <p>OpenClaw 宣布与主流云服务平台完成深度集成，现在用户可以直接在 OpenClaw 中管理 AWS EC2 实例、Azure 虚拟机、阿里云服务器等资源。新增的云服务技能支持资源查看、快照管理、自动扩缩容等操作，大大提升了运维效率。</p>
+                <div class="meta">
+                    <a href="https://docs.openclaw.ai/integrations/cloud" target="_blank">查看原文 →</a>
+                    <span>2026-02-04</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-title">🔥 热门技能推荐</div>
+        
+        <div class="skills-list">
+            <div class="skill-card">
+                <h3>homeassistant</h3>
+                <p class="desc">智能家居控制技能，连接 Home Assistant 平台，实现对灯光、插座、传感器等智能设备的语音和自动化控制。支持场景模式和定时任务。</p>
+                <div class="tags">
+                    <span class="tag">智能家居</span>
+                    <span class="tag">自动化</span>
+                    <span class="tag">IoT</span>
+                </div>
+                <div class="meta">
+                    <span>📅 发布: 2026-01-15</span>
+                    <span>⭐ 2,847 Stars</span>
+                    <span>📥 15,230 Installs</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>deepwork-tracker</h3>
+                <p class="desc">深度工作追踪技能，帮助用户追踪和管理专注工作时间。自动记录专注时段，生成热力图统计，支持番茄工作法和目标设定。</p>
+                <div class="tags">
+                    <span class="tag">生产力</span>
+                    <span class="tag">时间管理</span>
+                    <span class="tag">自我提升</span>
+                </div>
+                <div class="meta">
+                    <span>📅 发布: 2026-01-20</span>
+                    <span>⭐ 1,956 Stars</span>
+                    <span>📥 8,450 Installs</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>feishu-bridge</h3>
+                <p class="desc">飞书桥梁技能，将 OpenClaw 与飞书(Lark)深度集成。支持消息接收/发送、多维表格操作、文档管理、机器人卡片等功能。</p>
+                <div class="tags">
+                    <span class="tag">飞书</span>
+                    <span class="tag">协作办公</span>
+                    <span class="tag">国产软件</span>
+                </div>
+                <div class="meta">
+                    <span>📅 发布: 2026-01-18</span>
+                    <span>⭐ 1,523 Stars</span>
+                    <span>📥 6,890 Installs</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>eat-tracker</h3>
+                <p class="desc">饮食记录追踪技能，通过自然语言和图片识别记录每日饮食。自动分析营养摄入，生成饮食报告，支持多维表格同步。</p>
+                <div class="tags">
+                    <span class="tag">健康生活</span>
+                    <span class="tag">饮食记录</span>
+                    <span class="tag">营养分析</span>
+                </div>
+                <div class="meta">
+                    <span>📅 发布: 2026-02-03</span>
+                    <span>⭐ 892 Stars</span>
+                    <span>📥 3,210 Installs</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>minimax-usage</h3>
+                <p class="desc">MiniMax API 用量监控技能，实时追踪 API 调用次数和费用。支持用量预警、账单分析、使用报告生成等功能。</p>
+                <div class="tags">
+                    <span class="tag">开发工具</span>
+                    <span class="tag">API 监控</span>
+                    <span class="tag">成本管理</span>
+                </div>
+                <div class="meta">
+                    <span>📅 发布: 2026-02-05</span>
+                    <span>⭐ 654 Stars</span>
+                    <span>📥 2,156 Installs</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">← 返回首页</a>
+        </div>
+        
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
+    </div>
+</body>
+</html>
