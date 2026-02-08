@@ -172,7 +172,7 @@ html = f'''<!DOCTYPE html>
             <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
         </div>
         <div class="nav">
-            <a href="../index.html">← 返回首页</a>
+            <a href="../../index.html">← 返回首页</a>
         </div>
         
         <div class="header">
