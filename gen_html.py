@@ -3,7 +3,7 @@
 import json
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 
 if len(sys.argv) != 4:
     print("Usage: gen_html.py <json_file> <output_html> <repo_dir>")
@@ -18,7 +18,9 @@ with open(json_file, 'r') as f:
 
 now = datetime.now().strftime('%Y-%m-%d %H:%M')
 today = datetime.now().strftime('%Y年%m月%d日')
-prev_day = datetime.now().strftime('%Y-%m-%d')
+day = datetime.now().strftime('%d')
+prev_day_dt = datetime.now() - timedelta(days=1)
+prev_day = str(int(prev_day_dt.strftime('%d'))).zfill(2)  # 只是日期数字，如 "01"
 
 html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -173,8 +175,8 @@ html = f'''<!DOCTYPE html>
             <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
         </div>
         <div class="nav">
-            <a href="../01/index.html">← 昨日</a>
-            <a href="./">今日</a>
+            <a href="../{prev_day}.html">← 昨日</a>
+            <a href="./{day}.html">今日</a>
         </div>
         
         <div class="header">
