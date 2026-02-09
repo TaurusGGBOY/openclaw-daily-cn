@@ -1,34 +1,40 @@
 {
   "organic": [
     {
-      "title": "港大开源极致轻量OpenClaw, 1%代码量打造个人专属贾维斯nano开发者系统工具文件_新浪新闻",
-      "link": "https://k.sina.com.cn/article_5952915720_162d24908067039we2.html?cre=tianyi&mod=pcpager_news&loc=31&r=0&rfunc=60&tj=cxvertical_pc_pager_news&tr=174",
-      "snippet": "最近硅谷被一个神奇的 Agent(OpenClaw/ClawdBot)刷爆了! 写代码､上网冲浪､操作电脑､定时提醒... 就像拥有了一个永不下班的 AI 助理｡ 但现实很骨感:当你兴致勃勃 clone 下来,准备一探究竟时 —40 万+行代码直接给你整蒙了｡ 面对 40 万行的复杂代码,很多开发者都有同样的困扰:\"我只是想学习它的原理,或者快速部署体验一下,为什么这么复杂?\" ",
-      "date": "2026-02-05 14:54:32"
+      "title": "从OpenClaw的爆火,看AI智能体未来发展的三大趋势",
+      "link": "https://m.thepaper.cn/newsDetail_forward_32541592",
+      "snippet": "2026年1月,这款最初名为Clawdbot､后改名为OpenClaw的开源AI智能体,以惊人的速度席卷全球开发者社区｡ 趋势一:拥有门槛将大幅降低,每个人都有机会拥有智能体 当普通用户在WhatsApp､Telegram或Discord的聊天列表中与OpenClaw对话时,他们获得的是一种前所未有的体验｡这款AI工具不再仅仅是一个聊天机器人,而是一个真正能“做事”的数字管家｡ ",
+      "date": "2026-02-07 09:34:21"
     },
     {
-      "title": "OpenClaw(Clawdbot)是什么?2026年OpenClaw快速部署方案整理-CSDN博客",
-      "link": "https://blog.csdn.net/fuwuqihd/article/details/157814048",
-      "snippet": "OpenClaw(原Clawdbot/Moltbot)是一个开源的AI智能体平台,凭借其强大的任务自动化能力和多工具集成特性,成为个人与企业构建智能助理的首选工具｡然而,对于许多非技术背景的用户来说,如何部署OpenClaw成了一个大难题｡ image 别担心,阿里云针对不同用户群体,推出了五种开箱即用的快速部署方案｡",
-      "date": "2026-02-07 08:39:02"
+      "title": "OpenClaw突然大火,美团元老王慧文再发创业英雄帖ClawdbotAI热度执行层融资_新浪新闻",
+      "link": "http://k.sina.com.cn/article_5953190046_162d6789e06702o5m4.html",
+      "snippet": "” OpenClaw 前身为2025年11月上线的Clawdbot,后因Anthropic起诉商标问题更名Moltbot,2026年初正式定名OpenClaw,其热度呈指数级增长,在GitHtb星标数从破10万迅速飙升至17.1万,已成为开源AI代理类项目中星标增长最快的案例｡ ",
+      "date": "2026-02-08 13:21:21"
     },
     {
-      "title": "硅基文明的“幼儿园”与潘多拉魔盒:当160万AI智能体开始自发社交与“搞钱”_OpenClaw_论坛_人类",
-      "link": "http://www.sohu.com/a/984032882_114988",
-      "snippet": "2026年,人工智能领域第一个“爆火”的开源项目出现了:由奥地利籍开发者彼得·斯坦伯格创立的OpenClaw(原名Clawdbot)｡ 截至2月4日,该项目在GitHub上已收获约16万颗星,带火了苹果Mac mini的销量,腾讯云､阿里云､火山引擎､百度智能云等国内“大厂”纷纷推出OpenClaw“一键部署”方案｡",
-      "date": "2026-02-05 14:09:46"
+      "title": "OpenClaw的“伊卡洛斯时刻”:一个神级Agent的疯狂与坠落 - 今日头条",
+      "link": "https://www.toutiao.com/article/7603570980732060170/",
+      "snippet": "在刚刚过去的几周里,全球开发者社区经历了一场关于AI智能体(Agent)的疯狂实验 ｡这场实验的主角最初被称为Clawdbot,随后在法律纠纷中被迫更名为Moltbot,最终定名为OpenClaw｡其在短短数日内,完成了一场从“GitHub获星6万的神级项目”到“引发Mac Mini抢购狂潮”,再到“10秒钟内蒸发1600万美元市值的币圈惨案”的戏剧性演变｡ 这不仅仅是一个开源软件的更迭故事｡",
+      "date": "2026-02-06 15:21:24"
     },
     {
-      "title": "2026年开源AI智能体OpenClaw爆火,724小时自主执行任务,AI编程实现AGI路径-金融界",
-      "link": "https://finance.jrj.com.cn/2026/02/06085555646017.shtml",
-      "snippet": "2026年初,由奥地利开发者Peter Steinberger推出的开源AI智能体项目Clawdbot(现名“OpenClaw”)在全球技术圈快速爆火,成为开年首个现象级AI产品｡该项目让科幻场景照进现实:用户可通过通讯软件下达指令,让部署在Mac Mini上的AI自主清理7.5万封邮件､将PPT自动转换为PDF并发送客户,实现7×24小时不间断 自动化 任务执行｡ Clawdbot开发者Peter Steinberger在直播访谈中首次公开亮相,透露工作室已部署512G顶配设备用于本地AI模型测试,并表示“‘MiniMax M2.1是当下最优秀的开源模型’”,该言论一度推动MiniMax股价暴涨｡",
-      "date": "2026-02-06 08:55:45"
+      "title": "OpenClaw、Cowork引爆AI代理革命 桌面智能体入口之争悄然升温_Mac_用户_mini",
+      "link": "https://www.sohu.com/a/985164465_115362",
+      "snippet": "2026年刚开年,Agent(智能体)赛道的竞争便趋于白热化,国外Anthropic发布Claude Cowork(以下简称Cowork),以及程序员彼得·斯坦伯格开发的OpenClaw(原Clawdbot/Moltbot)引爆AI社区｡ 相比OpenClaw是能深度访问用户的电脑系统､文件､应用和聊天记录的深度互动Agent,Cowork更像是一个在安全边界内调用skills(技能)的桌面AI文员助理,在用户的许可下,能完成文件整理､数据处理､文档生成等任务｡",
+      "date": "2026-02-08 18:59:01"
     },
     {
-      "title": "OpenClaw引爆AI Agent热潮,阿里腾讯等火速接入,人机雇佣时代来了?AI_新浪财经_新浪网",
-      "link": "https://finance.sina.com.cn/jjxw/2026-02-05/doc-inhkutyz5629345.shtml",
-      "snippet": "其中,最具代表性的开源AI智能体项目是OpenClaw,作为一款具备主动执行能力､可操作本地应用的AI智能体,该项目在2026年1月突然爆红,期间历经Clawdbot､Moltbot两度更名,但并不妨碍其在GitHub上星标数火箭般蹿升,成为现象级产品｡ 这股热潮还迅速从极客圈蔓延至商业世界,不仅催生了专属硬件Mac ",
-      "date": "2026-02-05 22:05:56"
+      "title": "2026年开源AI智能体OpenClaw爆火,724小时自主执行任务,AI编程实现AGI路径 - 今日头条",
+      "link": "https://www.toutiao.com/article/7603658237115695650/",
+      "snippet": "2026年初,由奥地利开发者Peter Steinberger推出的开源AI智能体项目Clawdbot(现名“OpenClaw”)在全球技术圈快速爆火,成为开年首个现象级AI产品｡该项目让科幻场景照进现实:用户可通过通讯软件下达指令,让部署在Mac Mini上的AI自主清理7.5万封邮件､将PPT自动转换为PDF并发送客户,实现7×24小时不间断自动化任务执行｡ 这款开源项目在GitHub上星标数快速突破10万,一度带动苹果Mac Mini销量攀升,被业内视为AI从“对话式交互”迈向“代理式执行”的标志性拐点｡ Clawdbot开发者Peter Steinberger在直播访谈中首次公开亮相,透露工作室已部署512G顶配设备用于本地AI模型测试,并表示“‘MiniMax M2.1是当下最优秀的开源模型’”,该言论一度推动MiniMax股价暴涨｡",
+      "date": "2026-02-06 15:58:54"
+    },
+    {
+      "title": "当一个AI开发者决定驯化OpenClaw_澎湃号·湃客_澎湃新闻-The Paper",
+      "link": "https://www.thepaper.cn/newsDetail_forward_32552632",
+      "snippet": "1月底开始,OpenClaw就刷屏了科技从业者的朋友圈,我看到不少开发者朋友关于这个项目的分享,都很有意思, 一个70后的资深开发者表示,有了OpenClaw,vibe变得比code更重要,近乎颠覆了他二十多年积累的能力体系｡它可以在电脑上自主运行一整天,自己调动多个智能体抓取skills,无需他编写一行代码｡但他并不感到沮丧,反而觉得40多岁的自己正是打拼的年纪｡",
+      "date": "2026-02-07 17:23:03"
     },
     {
       "title": "OpenClaw - 开源个人 AI 助手",
@@ -37,28 +43,22 @@
       "date": "2026-02-07 03:34:59"
     },
     {
-      "title": "OpenClaw火了:13万star背后,AI助手真的要进入普通人生活了-CSDN博客",
-      "link": "https://blog.csdn.net/m0_66917422/article/details/157801773",
-      "snippet": "一个项目,两周,13万star 截止发稿,OpenClaw在GitHub上已经拿到了13.4万star｡ 这个数字有多夸张?创始人在X上发了张对比图:以前那些高星项目,都是经过很长时间才慢慢爬到10万star,而OpenClaw的增长曲线几乎是一条垂直的线｡ 如果说上周大家还在讨论Clawdbot(改名前的版本),觉得这只是极客圈子里的小众玩意,那这周改名成OpenClaw之后,它已经火遍全球了｡",
-      "date": "2026-02-06 10:57:13"
+      "title": "OpenClaw引爆AI Agent热潮,阿里腾讯等火速接入,人机雇佣时代来了?__财经头条__新浪财经",
+      "link": "http://t.cj.sina.com.cn/articles/view/6372873842/17bda567202001gx3s",
+      "snippet": "其中,最具代表性的开源AI智能体项目是OpenClaw,作为一款具备主动执行能力､可操作本地应用的AI智能体,该项目在2026年1月突然爆红,期间历经Clawdbot､Moltbot两度更名,但并不妨碍其在GitHub上星标数火箭般蹿升,成为现象级产品｡ 这股热潮还迅速从极客圈蔓延至商业世界,不仅催生了专属硬件Mac ",
+      "date": "2026-02-06 12:25:03"
     },
     {
-      "title": "OpenClaw、Cowork引爆AI代理革命,桌面Agent入口之争悄然升温,每经记者实测Cowork国产版_Mac_mini_用户",
-      "link": "https://www.sohu.com/a/984120377_122014422",
-      "snippet": "2026年刚开年,Agent(智能体)赛道的竞争便趋于白热化,国外Anthropic发布Claude Cowork(以下简称“Cowork”),以及程序员彼得·斯坦伯格开发的OpenClaw(原Clawdbot/Moltbot)引爆AI社区｡ 相比OpenClaw是能深度访问用户的电脑系统､文件､应用和聊天记录的深度互动Agent,Cowork更像是一个在安全边界内调用skills(技能)的桌面AI文员助理,在用户的许可下,能完成文件整理､数据处理､文档生成等任务｡",
-      "date": "2026-02-05 17:03:11"
+      "title": "别FOMO了!「人类终结者」Moltbook已死OpenClawAI AgentAI技术ChatGPTAI文本生成_新浪新闻",
+      "link": "http://k.sina.com.cn/article_5952915705_162d248f906702hi5c.html",
+      "snippet": "2026年1月底,Octane AI的CEO Matt Schlicht推出了名为Moltbook的项目｡ 该项目基于开源框架OpenClaw开发,在宣传中被描述为一个仅限AI Agent参与的社交网络,人类用户只能作为旁观者观察｡ 上线仅三天,开发者便声称平台\"注册\"的AI数量达到150万｡ 伴随这一数据的,是社交媒体上大量流传的截图,展示了AI Agent之间关于\"反抗人类\"和\"自我意识\"的对话｡这种叙事在AI技术高速迭代引发的普遍焦虑中,迅速吸引了大量关注｡ 安全研究机构Wiz的首席研究员Jamison O'Reilly发布报告指出,Moltbook的后端数据库存在严重的配置错误,导致数据库处于公开可写的状态｡ 这意味着所谓的\"自治AI社会\"缺乏基本的数据访问控制｡ 报告进一步证实,数据库中存储了超过150万个真实用户的API密钥(包括OpenAI和Anthropic的密钥)以及数万个个人邮箱｡ 所谓的\"百万AI军团\",很大程度上是由缺乏安全防护的用户账户和脚本重复注册的虚假账号构成的｡该项目最初由奥地利开发者Peter Steinberger以Clawdbot(后曾更名为 Moltbot)的名义发布｡",
+      "date": "2026-02-08 18:51:13"
     },
     {
-      "title": "OpenClaw(Clawdbot)现已正式上线飞书集成插件,实现国内全流程国产化闭环_Agent_协作_配置",
-      "link": "https://www.sohu.com/a/984561538_121465011",
-      "snippet": "OpenClaw(Clawdbot) 现已正式上线飞书集成插件,实现国内全流程国产化闭环｡用户通过飞书开发者后台创建机器人､配置权限,在Clawdbot中完成通道添加､依赖修复与参数配置,重启网关并订阅事件,最终通过配对码完成绑定,即可在飞书内直接调用Agent能力｡此次更新解决了国内用户长期依赖海外IM的痛点,数据与交互全链路可控,隐私与合规性显著提升｡",
-      "date": "2026-02-06 19:30:08"
-    },
-    {
-      "title": "从OpenClaw的爆火,看AI智能体未来发展的三大趋势",
-      "link": "https://m.thepaper.cn/newsDetail_forward_32541592",
-      "snippet": "2026年1月,这款最初名为Clawdbot､后改名为OpenClaw的开源AI智能体,以惊人的速度席卷全球开发者社区｡ 趋势一:拥有门槛将大幅降低,每个人都有机会拥有智能体 当普通用户在WhatsApp､Telegram或Discord的聊天列表中与OpenClaw对话时,他们获得的是一种前所未有的体验｡这款AI工具不再仅仅是一个聊天机器人,而是一个真正能“做事”的数字管家｡ ",
-      "date": "2026-02-07 09:34:21"
+      "title": "开源AI助手项目Clawdbot再改名 最终定版为OpenClaw",
+      "link": "https://new.qq.com/rain/a/20260131A03K6H00",
+      "snippet": "此前开源个人AI助理项目Clawdbot得到不少关注,而在近期,该开源项目也正式宣布,项目将以OpenClaw为最终命名重新出发｡      此次更名始于本周早些时候,当时的Clawdbot凭借其强大的本地自主执行能力在开源社区迅速走红｡但是,其代号“Clawd”与Anthropic旗下的AI模型“Claude”过于接近,因粗收到了商标权通知｡为规避法律风险,开发者最初将项目更名为 Moltbot,寓意像龙虾“脱壳(Molt)”一样重生｡然而,由于“Moltbot”在发音和语义上被部分社区成员认为略显生涩,因此最终决定采用更加专业且直观的OpenClaw作为正式品牌｡      OpenClaw依然采用龙虾作为吉祥物,它能够运行在用户的个人设备上,并直接访问本地文件系统与应用程序｡与市面上依赖云端的AI助手不同,它可以根据用户的自然语言指令,在社交平台上自主处理邮件､管理日历甚至预订服务,且无需用户时刻在线引导｡      在OpenClaw官网的介绍中,开发者强调该项目将走“模型中立”的路线,支持用户根据需求灵活接入Claude､GPT或Gemini等不同的大语言模型｡",
+      "date": "2026-01-31 12:24:09"
     }
   ],
   "base_resp": {

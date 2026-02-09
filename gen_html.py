@@ -5,26 +5,35 @@ import re
 import sys
 from datetime import datetime, timedelta
 
-if len(sys.argv) != 4:
-    print("Usage: gen_html.py <json_file> <output_html> <repo_dir>")
+if len(sys.argv) < 4:
+    print("Usage: gen_html.py <json_file> <output_html> <repo_dir> [date]")
+    print("  date: 可选，指定日期格式 YYYY-MM-DD，默认为今天")
     sys.exit(1)
 
 json_file = sys.argv[1]
 html_file = sys.argv[2]
 repo_dir = sys.argv[3]
 
+# 支持手动指定日期
+if len(sys.argv) >= 5:
+    target_date = datetime.strptime(sys.argv[4], '%Y-%m-%d')
+else:
+    target_date = datetime.now()
+
+today_date = target_date.strftime('%Y-%m-%d')
+yesterday_date = (target_date - timedelta(days=1)).strftime('%Y-%m-%d')
+today_formatted = target_date.strftime('%Y年%m月%d日')
+now = datetime.now().strftime('%Y-%m-%d %H:%M')
+
 with open(json_file, 'r') as f:
     data = json.load(f)
-
-now = datetime.now().strftime('%Y-%m-%d %H:%M')
-today = datetime.now().strftime('%Y年%m月%d日')
 
 html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenClaw 每日新闻 - {today}</title>
+    <title>OpenClaw 每日新闻 - {today_formatted}</title>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
@@ -164,6 +173,10 @@ html = f'''<!DOCTYPE html>
         .nav a:hover {{
             background: rgba(255,255,255,0.3);
         }}
+        .nav a.disabled {{
+            opacity: 0.5;
+            pointer-events: none;
+        }}
     </style>
 </head>
 <body>
@@ -172,7 +185,8 @@ html = f'''<!DOCTYPE html>
             <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
         </div>
         <div class="nav">
-            <a href="../../index.html">← 返回首页</a>
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/posts/daily-{yesterday_date}.html">← 昨日</a>
+            <a href="#" class="disabled">今日</a>
         </div>
         
         <div class="header">
