@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月14日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .back-home-top {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .back-home-top a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-home-top a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .news-item:hover {
+            transform: translateY(-2px);
+        }
+        .news-item h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-item .meta a:hover {
+            text-decoration: underline;
+        }
+        .news-item .meta span {
+            color: #999;
+            font-size: 13px;
+        }
+        .back-home {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-home a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .back-home a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .skills-section {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .skills-section h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .skill-item {
+            padding: 16px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+        .skill-item:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+        .skill-item h4 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .skill-item .description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .skill-item .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+        .skill-item .tag {
+            background: #667eea;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .skill-item .meta {
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-home-top">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-14 08:00 · 自动更新</p>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h2>18.6万星标霸榜GitHub!OpenClaw开源AI助理凭啥引爆全球</h2>
+                <p>2026年初AI Agent赛道迎现象级爆款,奥地利开发者打造的开源个人AI助理OpenClaw横空出世,数周斩获GitHub 18.6万+星标、3.2万Fork数,Discord社区在线成员破1.1万,登顶年度开源项目增速榜首。该项目历经ClawdBot、MoltBot两次更名终定OpenClaw,现已有130+贡献者,进入稳定发展阶段。</p>
+                <div class="meta">
+                    <a href="https://www.toutiao.com/w/1856425769656520/" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw病毒式传播引发安全争议</h2>
+                <p>在2026年初的全球科技版图中,OpenClaw正以一种近乎"物种入侵"的速度重塑人工智能的边界。据CNBC报道,它不仅在GitHub上收获了超过14.5万颗星,更被众多商界领袖视为能独立运行整家公司的"未来引擎"。然而,随着其伴生社交平台Moltbook的爆火,也引发了关于代理权、隐私边界与数字风险的激烈讨论。</p>
+                <div class="meta">
+                    <a href="http://news.sciencenet.cn/htmlnews/2026/2/560210.shtm" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw、Cowork引爆AI代理革命,桌面Agent入口之争悄然升温</h2>
+                <p>2026年刚开年,Agent赛道的竞争便趋于白热化。国外Anthropic发布Claude Cowork,以及OpenClaw引爆AI社区。超过10万GitHub星标,一周内200万访客,OpenClaw迅速成为硅谷的现象级产品。阿里云、腾讯云、京东云、百度智能云等相继宣布上线OpenClaw云端极简部署服务。</p>
+                <div class="meta">
+                    <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_93069845b7373452&faker=1" target="_blank">查看原文 →</a>
+                    <span>2026-02-08</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>市场研究部:OPENCLAW带动AI AGENT渗透提速</h2>
+                <p>开源个人AI助手项目OpenClaw的迅速走红,不仅反映了市场对下一代AI应用形态的认可,更表明AI Agent的技术可行性与实用性已得到广泛验证。AI领域已完成从"对话交互"到"代理行动"的范式转变。谷歌、腾讯、百度等巨头纷纷布局,推动其从"极客玩具"成为"大众工具"。</p>
+                <div class="meta">
+                    <a href="http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/824122940328/index.phtml" target="_blank">查看原文 →</a>
+                    <span>2026-02-11</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>开源AI智能体Clawdbot星标破13万,软件ETF一键掘金计算机软件行业机遇</h2>
+                <p>Clawdbot(OpenClaw)作为开源个人AI智能体项目,在GitHub上线后星标数迅速突破13.6万,成为2026年初增长最快的开源项目之一。腾讯云、阿里云及优刻得等国内云厂商已相继上线其云端极简部署服务。该智能体可7×24小时运行于用户本地设备,并通过WhatsApp、Telegram等日常通讯工具交互。</p>
+                <div class="meta">
+                    <a href="https://new.qq.com/rain/a/20260204A02XBT00" target="_blank">查看原文 →</a>
+                    <span>2026-02-04</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>桌面Agent热潮"安全债"调查</h2>
+                <p>2026开年,一款大红大紫的AI助手上演了冰与火之歌。OpenClaw快速席卷了GitHub和各大技术社区,仅用了十天时间便在GitHub狂揽8万星标。然而短短几日,就有人因操作失误账号被币圈黑客秒抢、卷入诈骗案,OpenClaw也被曝出数据库"裸奔"、用户量数据造假等安全问题。</p>
+                <div class="meta">
+                    <a href="https://new.qq.com/rain/a/20260203A031W000" target="_blank">查看原文 →</a>
+                    <span>2026-02-03</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>王慧文"点将"Clawdbot,美团联合创始人重返AI战场</h2>
+                <p>2026年2月7日凌晨,王慧文(美团联合创始人)又发了一封英雄帖。这次,他不再组局做大模型,而是瞄准了当下最火热的赛道:Clawdbot(现改名为OpenClaw)。投资、攒聚,甚至当"猎头",王慧文在Clawdbot身上倾注了不亚于对大模型的热情。</p>
+                <div class="meta">
+                    <a href="https://k.sina.com.cn/article_5953189932_162d6782c06703spju.html" target="_blank">查看原文 →</a>
+                    <span>2026-02-08</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw引爆AI Agent热潮,阿里腾讯等火速接入</h2>
+                <p>最具代表性的开源AI智能体项目OpenClaw,在2026年1月突然爆红,期间历经Clawdbot、Moltbot两度更名,但并不妨碍其在GitHub上星标数火箭般蹿升,成为现象级产品。这股热潮还迅速从极客圈蔓延至商业世界,催生了专属硬件Mac Mini的销量飙升。</p>
+                <div class="meta">
+                    <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_7476984a34d29752" target="_blank">查看原文 →</a>
+                    <span>2026-02-05</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skills-section">
+            <h3>🔥 热门技能推荐</h3>
+            <div class="skill-item">
+                <h4>📦 HomeAssistant</h4>
+                <p class="description">控制智能家居设备，支持灯光、开关、传感器等</p>
+                <div class="tags">
+                    <span class="tag">智能家居</span>
+                    <span class="tag">自动化</span>
+                    <span class="tag">IoT</span>
+                </div>
+                <div class="meta">
+                    <span>发布日期: 2026-01-15</span>
+                    <span>⬇️ 2,450 | ⭐ 890 | 📥 1,230</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h4>🧠 PARA Second Brain</h4>
+                <p class="description">个人知识管理系统，使用PARA方法论组织笔记</p>
+                <div class="tags">
+                    <span class="tag">知识管理</span>
+                    <span class="tag">笔记</span>
+                    <span class="tag"> productivity</span>
+                </div>
+                <div class="meta">
+                    <span>发布日期: 2026-01-20</span>
+                    <span>⬇️ 1,890 | ⭐ 720 | 📥 980</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h4>🎙️ ElevenLabs TTS</h4>
+                <p class="description">高质量语音合成，支持28种语言和多种音色</p>
+                <div class="tags">
+                    <span class="tag">语音合成</span>
+                    <span class="tag">TTS</span>
+                    <span class="tag">音频</span>
+                </div>
+                <div class="meta">
+                    <span>发布日期: 2026-01-18</span>
+                    <span>⬇️ 3,120 | ⭐ 1,250 | 📥 2,100</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h4>🌐 SearXNG Image Search</h4>
+                <p class="description">开源图片搜索引擎，支持多源聚合搜索</p>
+                <div class="tags">
+                    <span class="tag">图片搜索</span>
+                    <span class="tag">SearXNG</span>
+                    <span class="tag">隐私搜索</span>
+                </div>
+                <div class="meta">
+                    <span>发布日期: 2026-02-09</span>
+                    <span>⬇️ 980 | ⭐ 340 | 📥 560</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h4>🍎 Apple Reminders</h4>
+                <p class="description">管理Apple提醒事项，支持列表、日期过滤和JSON输出</p>
+                <div class="tags">
+                    <span class="tag">提醒事项</span>
+                    <span class="tag">Apple</span>
+                    <span class="tag">待办</span>
+                </div>
+                <div class="meta">
+                    <span>发布日期: 2026-01-25</span>
+                    <span>⬇️ 1,560 | ⭐ 580 | 📥 820</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">← 返回首页</a>
+        </div>
+        
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
+    </div>
+</body>
+</html>
