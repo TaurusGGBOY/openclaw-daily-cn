@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月15日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .back-home-top {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .back-home-top a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-home-top a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .news-item:hover {
+            transform: translateY(-2px);
+        }
+        .news-item h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-item .meta a:hover {
+            text-decoration: underline;
+        }
+        .news-item .meta span {
+            color: #999;
+            font-size: 13px;
+        }
+        .back-home {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-home a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .back-home a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* 技能推荐样式 */
+        .skills-section {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .skills-section h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+        }
+        .skill-item {
+            padding: 16px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+        .skill-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102,126,234,0.15);
+        }
+        .skill-item h4 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .skill-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        .skill-meta {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-home-top">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-15 08:00 · 自动更新</p>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h2>v2026.2.13 版本发布：Discord 语音消息 + Hugging Face 支持</h2>
+                <p>OpenClaw 发布 v2026.2.13 版本，带来多项重要更新：Discord 语音消息支持波形预览、Telegram/Discord 线程修复、Hugging Face 一级支持、vLLM onboarding provider 等。同时修复了 20+ bug，包括 Outbound 消息队列防止丢失、自动回复线程优化等。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Discord 语音消息支持波形预览</h2>
+                <p>Discord 频道现在支持从本地音频文件发送带波形预览的语音消息，包括静音投递功能。感谢 @nyanjou 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/7253" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Discord 可配置在线状态</h2>
+                <p>添加 Discord 可配置的在线状态/活动/类型/URL 支持，自定义状态默认使用活动文本。感谢 @h0tp-ftw 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/10855" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>新增 Hugging Face Inference Provider 一级支持</h2>
+                <p>OpenClaw 添加一等一的 Hugging Face Inference provider 支持，包括 onboarding 认证选择、API key 流程和默认模型选择。同时保留 Hugging Face 认证意图的 auth-choice 重映射。感谢 @Josephrp 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/13472" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>vLLM 正式支持为 Onboarding Provider</h2>
+                <p>添加 vLLM 作为 onboarding provider，支持模型发现、认证配置和非交互式认证验证。感谢 @gejifeng 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/12577" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Outbound 消息队列：防止网关重启后消息丢失</h2>
+                <p>添加写前投递队列和崩溃恢复重试机制，防止网关重启后丢失出站消息。感谢 @nabbilkhan 和 @thewilloftheshadow 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/15636" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>自动回复与线程优化：修复隐式回复</h2>
+                <p>自动注入隐式回复线程，使 replyToMode 无需模型发出 [[reply_to_current]] 即可工作，同时保持 replyToMode: off 行为。感谢 @Diaspar4u 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/14976" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>媒体消息优化：允许纯图片消息触达 Agent</h2>
+                <p>允许纯图片入站消息（无标题）触达 agent 而不是短路为空文本，并在排队/后续 prompt body 中保留线程上下文。感谢 @arosstale 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/11916" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Web UI 图片渲染修复</h2>
+                <p>Web UI 现在支持在 markdown 中渲染图片，添加 img 到 DOMPurify 允许标签，src/alt 到允许属性。感谢 @lailoo 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/issues/15437" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Telegram 语音修复：支持 MP3 和 M4A</h2>
+                <p>Telegram 和 Matrix 现在将 MP3 和 M4A（包括 audio/mp4）视为语音兼容进行路由，同时保持 WAV/AAC 回退到常规音频发送。感谢 @azade-c 的贡献。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/15438" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 热门技能推荐 -->
+        <div class="skills-section">
+            <h3>🔥 热门技能推荐</h3>
+            
+            <div class="skill-item">
+                <h4>HomeAssistant</h4>
+                <p>通过 HomeAssistant 控制智能灯、插座、空调等设备。支持场景联动和自动化，让你的 AI 助手成为真正的智能管家。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">智能家居</span>
+                    <span class="skill-tag">自动化</span>
+                </div>
+                <div class="skill-meta">发布日期: 2026-01 | ⭐ 120+ Stars | 📥 500+ Installs</div>
+            </div>
+            
+            <div class="skill-item">
+                <h4>ElevenLabs TTS</h4>
+                <p>使用 ElevenLabs 生成自然流畅的语音。支持多种音色选择，让你的 AI 助手开口说话，增强交互体验。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">语音合成</span>
+                    <span class="skill-tag">TTS</span>
+                </div>
+                <div class="skill-meta">发布日期: 2026-01 | ⭐ 95+ Stars | 📥 420+ Installs</div>
+            </div>
+            
+            <div class="skill-item">
+                <h4>PARA Second Brain</h4>
+                <p>基于 PARA 方法论的个人知识管理系统。自动整理笔记、建立双向链接，让你的知识永久留存并可随时检索。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">知识管理</span>
+                    <span class="skill-tag">笔记</span>
+                </div>
+                <div class="skill-meta">发布日期: 2026-01 | ⭐ 88+ Stars | 📥 380+ Installs</div>
+            </div>
+            
+            <div class="skill-item">
+                <h4>Weather</h4>
+                <p>获取实时天气和预报信息。支持全球城市天气查询，无需 API Key，适合日常使用。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">天气</span>
+                    <span class="skill-tag">生活</span>
+                </div>
+                <div class="skill-meta">发布日期: 2026-01 | ⭐ 75+ Stars | 📥 320+ Installs</div>
+            </div>
+            
+            <div class="skill-item">
+                <h4>Apple Reminders</h4>
+                <p>管理 Apple Reminders，通过 remindctl CLI 在 macOS 上列出、添加、编辑、完成和删除提醒。支持列表、日期过滤和 JSON 输出。</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">提醒</span>
+                    <span class="skill-tag">macOS</span>
+                </div>
+                <div class="skill-meta">发布日期: 2026-01 | ⭐ 65+ Stars | 📥 280+ Installs</div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">← 返回首页</a>
+        </div>
+        
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
+    </div>
+</body>
+</html>
