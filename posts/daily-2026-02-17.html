@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月17日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .back-home-top {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .back-home-top a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-home-top a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .news-item:hover {
+            transform: translateY(-2px);
+        }
+        .news-item h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-item .meta a:hover {
+            text-decoration: underline;
+        }
+        .news-item .meta span {
+            color: #999;
+            font-size: 13px;
+        }
+        .back-home {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-home a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .back-home a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .skills-section {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .skills-section h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+        }
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .skill-item:last-child {
+            border-bottom: none;
+        }
+        .skill-info {
+            flex: 1;
+        }
+        .skill-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .skill-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .skill-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .skill-stats {
+            text-align: right;
+            min-width: 120px;
+        }
+        .skill-stat {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 4px;
+        }
+        .skill-stat strong {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-home-top">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
+        </div>
+        <div class="nav">
+            <a href="../16/index.html">← 昨日</a>
+            <a href="./">今日</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-17 08:00 · 自动更新</p>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h2>OpenClaw v2026.2.15 发布：Discord Components V2 + 嵌套子代理</h2>
+                <p>OpenClaw 发布了 v2026.2.15 版本，带来多项重大更新：Discord 支持 Components V2（按钮、下拉菜单、模态框），支持嵌套子代理（sub-sub-agents）可配置深度，新增 Slack/Discord/Telegram 每个频道独立的 ack reaction 配置，以及 Cron/Gateway webhook 通知功能。安全方面也进行了多项加固，包括 SHA-256 沙箱配置哈希、Telegram bot token 敏感信息脱敏等。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.2.15" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Discord Components V2 重磅上线：原生交互体验</h2>
+                <p>OpenClaw v2026.2.15 为 Discord 带来了全新的 Components V2 支持，现在可以通过按钮、下拉选择器、模态框和附件文件块实现原生交互。这意味着用户可以在 Discord 中直接与 AI 代理进行更丰富的交互操作，大大提升了用户体验。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.2.15" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>嵌套子代理功能发布：可配置深度限制</h2>
+                <p>OpenClaw 现在支持嵌套子代理（sub-sub-agents），用户可以通过设置 agents.defaults.subagents.maxSpawnDepth 来控制子代理的嵌套深度（建议设置为 2）。该功能还包括 maxChildrenPerAgent 限制（默认为 5）和深度感知的工具策略，为复杂任务处理提供了更强的灵活性。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.2.15" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>安全加固：SHA-256 沙箱配置 + 多项漏洞修复</h2>
+                <p>OpenClaw v2026.2.15 进行了大规模安全更新：使用 SHA-256 替换已弃用的 SHA-1 沙箱配置哈希、阻止危险的 Docker 配置（绑定挂载、主机网络）、防止 Telegram bot token 泄露到错误日志、修复 Web Fetch 内存耗尽问题等，共计 40+ 项安全修复。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.2.15" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Plugins Hook 扩展：支持 llm_input 和 llm_output</h2>
+                <p>OpenClaw v2026.2.15 为插件系统新增了 llm_input 和 llm_output hook payload，扩展可以观察 prompt/输入上下文和模型输出的使用详情。这为开发者提供了更强大的监控和调试能力，便于优化 AI 代理的性能。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/16724" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Memory FTS 中文支持：Unicode-aware 查询</h2>
+                <p>OpenClaw v2026.2.15 修复了 Memory FTS（全文搜索）的 Unicode 支持问题，现在非 ASCII 查询（包括中文、日文等 CJK 字符）可以正确生成关键词 token，不再回退到仅向量搜索。这对中文用户来说是重要的体验提升。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/issues/17672" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Telegram 多项优化：媒体处理 + 流式输出</h2>
+                <p>OpenClaw v2026.2.15 对 Telegram 进行了多项优化：媒体文件获取失败自动重试 3 次、语音消息转录支持、流式预览回复就地完成、关闭块流式处理避免消息拆分等。用户体验得到显著提升。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.2.15" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>Discord 会话连续性优化：修复 sessionKey=unknown 问题</h2>
+                <p>OpenClaw v2026.2.15 修复了 Discord 会话连续性问题，当运行时 payload 缺少 message.channelId 时，现在会回退到事件原始 channel_id 值进行路由和会话键计算，确保同一频道的消息在多轮对话中保持历史记录。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/pull/17622" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>TUI 改进：修复 ANSI 转义码渲染问题</h2>
+                <p>OpenClaw v2026.2.15 修复了 TUI 中的多个问题：可搜索选择器过滤和高亮渲染现在 ANSI 感知，避免隐藏转义代码破坏样式；复制敏感长 token（URL/路径）在换行和溢出清理时保持完整，不再插入破坏复制/粘贴的空格。</p>
+                <div class="meta">
+                    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.2.15" target="_blank">查看原文 →</a>
+                    <span>2026-02-16</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skills-section">
+            <h3>🔥 热门技能推荐</h3>
+            
+            <div class="skill-item">
+                <div class="skill-info">
+                    <div class="skill-name">HomeAssistant</div>
+                    <div class="skill-desc">控制智能家居设备</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">智能家居</span>
+                        <span class="skill-tag">IoT</span>
+                    </div>
+                </div>
+                <div class="skill-stats">
+                    <div class="skill-stat">发布: 2026-01</div>
+                    <div class="skill-stat">⭐ <strong>2.1k</strong></div>
+                    <div class="skill-stat">📥 <strong>8.5k</strong></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-info">
+                    <div class="skill-name">ElevenLabs TTS</div>
+                    <div class="skill-desc">高质量语音合成</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">语音</span>
+                        <span class="skill-tag">TTS</span>
+                    </div>
+                </div>
+                <div class="skill-stats">
+                    <div class="skill-stat">发布: 2026-01</div>
+                    <div class="skill-stat">⭐ <strong>1.8k</strong></div>
+                    <div class="skill-stat">📥 <strong>6.2k</strong></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-info">
+                    <div class="skill-name">PARA Second Brain</div>
+                    <div class="skill-desc">构建第二大脑</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">记忆</span>
+                        <span class="skill-tag">知识管理</span>
+                    </div>
+                </div>
+                <div class="skill-stats">
+                    <div class="skill-stat">发布: 2026-01</div>
+                    <div class="skill-stat">⭐ <strong>1.5k</strong></div>
+                    <div class="skill-stat">📥 <strong>5.1k</strong></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-info">
+                    <div class="skill-name">DeepRead OCR</div>
+                    <div class="skill-desc">AI 驱动的文档 OCR</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OCR</span>
+                        <span class="skill-tag">文档</span>
+                    </div>
+                </div>
+                <div class="skill-stats">
+                    <div class="skill-stat">发布: 2026-01</div>
+                    <div class="skill-stat">⭐ <strong>1.2k</strong></div>
+                    <div class="skill-stat">📥 <strong>4.3k</strong></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-info">
+                    <div class="skill-name">Nano Banana Pro</div>
+                    <div class="skill-desc">AI 图像生成与编辑</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">图像</span>
+                        <span class="skill-tag">AI绘画</span>
+                    </div>
+                </div>
+                <div class="skill-stats">
+                    <div class="skill-stat">发布: 2026-02</div>
+                    <div class="skill-stat">⭐ <strong>980</strong></div>
+                    <div class="skill-stat">📥 <strong>3.2k</strong></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">← 返回首页</a>
+        </div>
+        
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
+    </div>
+</body>
+</html>
