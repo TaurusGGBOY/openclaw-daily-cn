@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日新闻 - 2026年02月20日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .back-home-top {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .back-home-top a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-home-top a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p { color: #666; font-size: 14px; }
+        .lobster {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .news-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .news-item:hover {
+            transform: translateY(-2px);
+        }
+        .news-item h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .news-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .news-item .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .news-item .meta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-item .meta a:hover {
+            text-decoration: underline;
+        }
+        .news-item .meta span {
+            color: #999;
+            font-size: 13px;
+        }
+        
+        /* 技能推荐区块 */
+        .skills-section {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .skills-section h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+        }
+        .skill-item {
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            transition: transform 0.2s;
+        }
+        .skill-item:hover {
+            transform: translateX(4px);
+        }
+        .skill-item:last-child {
+            margin-bottom: 0;
+        }
+        .skill-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 6px;
+        }
+        .skill-desc {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        
+        .back-home {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-home a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .back-home a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+        .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-home-top">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">🏠 返回首页</a>
+        </div>
+        <div class="nav">
+            <a href="../19/index.html">← 昨日</a>
+            <a href="./">今日</a>
+        </div>
+        
+        <div class="header">
+            <div class="lobster">🦞</div>
+            <h1>OpenClaw 每日新闻</h1>
+            <p>2026-02-20 08:00 · 自动更新</p>
+        </div>
+        
+        <div class="news-list">
+            <div class="news-item">
+                <h2>OpenClaw创始人加盟OpenAI，项目移交基金会持续开源</h2>
+                <p>2026年2月15日，广受关注的开源智能体项目OpenClaw创始人彼得·斯坦伯格正式宣布加入OpenAI。与此同时，OpenClaw项目移交基金会持续开源，保持其开放特性。这一重大人事变动标志着AI智能体领域进入新的发展阶段。</p>
+                <div class="meta">
+                    <a href="https://comment.zol.com.cn/203/11355866_0_0_1.html" target="_blank">查看原文 →</a>
+                    <span>2026-02-19</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw大更新：接入Sonnet 4.6模型，100万token上下文窗口开放测试</h2>
+                <p>2月18日，OpenClaw正式推出2026.2.17版本更新。此次更新涵盖四项主要内容：集成Anthropic最新发布的Sonnet 4.6模型、开放100万token上下文测试功能、支持从聊天中生成子代理，以及新增iOS分享扩展。Sonnet 4.6测试版支持100万token的上下文窗口，是此前Sonnet最大窗口的两倍。</p>
+                <div class="meta">
+                    <a href="https://www.sohu.com/a/988250202_114984" target="_blank">查看原文 →</a>
+                    <span>2026-02-18</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw创始人预言：八成应用将被AI智能体替代</h2>
+                <p>2026年2月17日，OpenClaw创始人斯坦伯格在访谈中提出，未来约八成现有应用程序将逐步退出主流使用场景，取而代之的将是具备自主理解与执行能力的个人AI智能体。他指出，当前大多数应用程序本质上只是数据流转的中介，而AI智能体更能诉求。</p>
+直接回应用户的深层                <div class="meta">
+                    <a href="https://m.zol.com.cn/article/11357376.html" target="_blank">查看原文 →</a>
+                    <span>2026-02-17</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>爆火的OpenClaw真的要脱离人类监控了？Moltbook平台160万AI账号</h2>
+                <p>OpenClaw在全球开发者平台GitHub上星标数直冲20万，成为2026年开年最受关注的AI现象。基于它开发的AI智能体已建起专属社交平台Moltbook，160万个AI账号在这里安家，产出超750万条内容。它们互相辩论"意识是什么"，甚至自创了专属的宗教和学术预印本平台clawXiv。</p>
+                <div class="meta">
+                    <a href="https://tech.ifeng.com/c/8qsC2trQBVo" target="_blank">查看原文 →</a>
+                    <span>2026-02-19</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>基于OpenClaw的EdgeClaw发布：端云协同保护隐私</h2>
+                <p>EdgeClaw于2026年2月12日正式发布，是一款端云协同个人AI助手，由清华大学自然语言处理实验室(THUNLP)、中国人民大学、AI9Stars、ModelBest(面壁智能)与OpenBMB联合开发，基于OpenClaw构建。其核心创新在于提出了三层安全协议(S1/S2/S3)与GuardAgent协议，实现了"公开数据上云，隐私数据留本地"的智能路由机制。</p>
+                <div class="meta">
+                    <a href="https://yetingyun.blog.csdn.net/article/details/158074860" target="_blank">查看原文 →</a>
+                    <span>2026-02-14</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>移动云全面上线OpenClaw，新客首月特惠15元起</h2>
+                <p>2026年2月，移动云官网联合推出OpenClaw专题活动，新客享15元/月起优惠。该产品支持7×24小时语音文字指令，助力个人办公及企业自动化，无需复杂部署，提升效率并保障数据安全，成为今年AI应用新宠。</p>
+                <div class="meta">
+                    <a href="http://smb.pconline.com.cn/manu/" target="_blank">查看原文 →</a>
+                    <span>2026-02-05</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>OpenClaw桌面版更新：小白用户也能轻松使用</h2>
+                <p>OpenClaw桌面版更新到第10版，带来更稳定的连接体验和更友好的用户界面。这一更新使得更多普通用户能够轻松上手OpenClaw，享受AI助手带来的便利。</p>
+                <div class="meta">
+                    <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_4046997157b64652" target="_blank">查看原文 →</a>
+                    <span>2026-02-19</span>
+                </div>
+            </div>
+            <div class="news-item">
+                <h2>百度电商Skill登陆OpenClaw，五大能力全开放</h2>
+                <p>2月13日，百度优选官方电商Skill正式上架ClawHub，这是OpenClaw生态首个官方级电商能力插件。该Skill将开放五大核心模块能力，包括CPS商品库检索、SPU跨平台比价、多商品参数对比与口碑总结、权威消费榜单，覆盖数码、家电、家居等主流品类。</p>
+                <div class="meta">
+                    <a href="https://wallstreetcn.com/livenews/3054835" target="_blank">查看原文 →</a>
+                    <span>2026-02-13</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 热门技能推荐区块 -->
+        <div class="skills-section">
+            <h3>🔥 热门技能推荐</h3>
+            
+            <div class="skill-item">
+                <div class="skill-name">HomeAssistant</div>
+                <div class="skill-desc">通过 HomeAssistant 控制智能灯、插座、空调等设备。支持场景联动和自动化，让你的 AI 助手成为真正的智能管家。</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">智能家居</span>
+                    <span class="skill-tag">自动化</span>
+                    <span class="skill-tag">IoT</span>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">ElevenLabs TTS</div>
+                <div class="skill-desc">使用 ElevenLabs 生成自然流畅的语音。支持多种音色选择，让你的 AI 助手开口说话，增强交互体验。</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">语音合成</span>
+                    <span class="skill-tag">TTS</span>
+                    <span class="skill-tag">音频</span>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">PARA Second Brain</div>
+                <div class="skill-desc">基于 PARA 方法论的个人知识管理系统。自动整理笔记、建立双向链接，让你的知识永久留存并可随时检索。</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">知识管理</span>
+                    <span class="skill-tag">笔记</span>
+                    <span class="skill-tag">记忆系统</span>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">百度电商</div>
+                <div class="skill-desc">百度优选官方电商Skill，提供CPS商品检索、跨平台比价、口碑分析、消费榜单等五大核心能力，一站式完成电商任务。</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">电商</span>
+                    <span class="skill-tag">比价</span>
+                    <span class="skill-tag">购物</span>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">Brave Search</div>
+                <div class="skill-desc">集成 Brave Search 搜索引擎，让 AI 助手具备实时网络搜索能力，获取最新资讯和信息。</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">搜索</span>
+                    <span class="skill-tag">信息检索</span>
+                    <span class="skill-tag">实时数据</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="https://taurusggboy.github.io/openclaw-daily-cn/">← 返回首页</a>
+        </div>
+        
+        <div class="footer">
+            <p>🦞 OpenClaw 每日新闻 · 由贾维斯自动生成</p>
+        </div>
+    </div>
+</body>
+</html>
